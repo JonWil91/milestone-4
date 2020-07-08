@@ -1,3 +1,21 @@
-.navbar {
-    color: blue;
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  background: #639058;
+  color: #fafafa;
+  margin-bottom: 0;
+  margin-top: 50px;
+  text-align: right;
+}
+
+.footer-text {
+    text-align: right;
+}
+
+body {
+    background-color: black;
 }

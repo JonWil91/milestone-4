@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700i&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     
 
     <title>JW Photography {% block extra_title %}{% endblock %}</title>
@@ -30,12 +31,18 @@
         </div>
 
         {% block content %}
-        
+            <main class="content"></main>
         {% endblock %}
 
-        <!-- {% block footer %}
-            <p>Footer</p>
-        {% endblock %} -->
+       <footer>
+		<!-- Footer -->
+		<div class="row footer">
+			<div class="col s12 footer-text">
+				<p>Copyright JR Williams</p>
+			</div>
+		</div>
+		<!-- Footer -->
+	</footer>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
