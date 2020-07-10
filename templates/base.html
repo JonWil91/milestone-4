@@ -14,35 +14,38 @@
 
     <title>JW Photography {% block extra_title %}{% endblock %}</title>
   </head>
+
   <body>
-    <header class="container-fluid fixed-top">
-            <nav class="navbar navbar-fixed-top">
-                <a href="{% url 'index' %}" class="navbar-brand">JW Photography</a>
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                        <a href="{% url 'index' %}">Home</a>
-                        <a href="{% url 'about' %}">About</a>
-                        <a href="{% url 'blog' %}">Blog</a>
-                        <a href="{% url 'gallery' %}">Gallery</a>
-                    </ul>
-            </nav>
-    </header>
-
-        <div class="message-container">
+    <!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'index' %}">JW Photography</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'index' %}">Home</a>
+            <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-item nav-link" href="{% url 'blog' %}">Blog</a>
+            <a class="nav-item nav-link" href="{% url 'gallery' %}">Gallery</a>
+            </div>
         </div>
+    </nav>
+    <!-- /Navbar -->
 
-        {% block content %}
-            <main class="content"></main>
-        {% endblock %}
+    <!-- Content -->
+    {% block content %}
+    
+    {% endblock %}
 
-       <footer>
-		<!-- Footer -->
-		<div class="row footer">
-			<div class="col s12 footer-text">
-				<p>Copyright JR Williams</p>
-			</div>
-		</div>
-		<!-- Footer -->
-	</footer>
+    <!-- /Content -->
+
+
+	
+
+
+
+   
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
