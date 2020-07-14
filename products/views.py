@@ -3,6 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def gallery(request):
+def products(request):
     """ A view to return the gallery page """
-    return render(request, 'gallery/gallery.html')
+    return render(request, 'products/products.html')

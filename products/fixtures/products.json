@@ -1,6 +1,4 @@
 [{"pk": 1, "model": "products.product", "fields": {"sku": "0000000001", "name": "Silerstar Village", "description": "Shot of Silverstar village with the colour of Sunrise", "price": 53.99, "category": 1, "rating": 4.6, "image": "IMG_0578.jpg"}},
-{"pk": 2, "model": "products.product", "fields": {"sku": "0000000002", "name": "Peyto Lake", "description": "View of Peyto Lake on a Sunny day", "price": 65.00, "category": 2, "rating": 4.7, "image": "IMG_600.jpg"}}]
-
-
+{"pk": 2, "model": "products.product", "fields": {"sku": "0000000002", "name": "Peyto Lake", "description": "View of Peyto Lake on a Sunny day", "price": 65.00, "category": 2, "rating": 4.7, "image": "/media/IMG_600.jpg"}}]
 
 
