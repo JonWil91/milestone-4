@@ -19,3 +19,8 @@
 body {
     background-color: #d6b0b0;
 }
+
+.landing-page-image {
+    position: relative;
+    display: flex;
+}
