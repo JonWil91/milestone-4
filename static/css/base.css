@@ -24,3 +24,9 @@ body {
     position: relative;
     display: flex;
 }
+
+.picture-border {
+    border: solid;
+    border-width: 7px;
+    border-color: white;
+}

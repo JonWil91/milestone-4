@@ -7,8 +7,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2>Products</h2>
                 <hr class="w-50">
+                <h2>Products</h2>
+                <ul class="list-inline my-3">
+                    <li class="list-inline-item">All</li>
+                    <li class="list-inline-item">Ski Hill</li>
+                    <li class="list-inline-item">Mountains</li>
+                    <li class="list-inline-item">Beach</li>
+                    <li class="list-inline-item">Nature</li>
+                </ul>
+                <hr class="w-50 my-4">
             </div>
         </div>
         <div class="row">
@@ -45,22 +53,22 @@
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
-                                <hr>
+                                <hr class="my-4">
                             </div>
                         {% endif %}                        
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
+                                <hr class="my-4">
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
                             <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
+                                <hr class="my-4">
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:4 %}
                             <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
+                                <hr class="my-4">
                             </div>
                         {% endif %}
                     {% endfor %}
