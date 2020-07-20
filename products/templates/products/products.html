@@ -21,10 +21,10 @@
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </div>
                     </li>
-                    <li class="list-inline-item">Ski Hill</li>
-                    <li class="list-inline-item">Mountains</li>
-                    <li class="list-inline-item">Beach</li>
-                    <li class="list-inline-item">Nature</li>
+                    <li class="list-inline-item"><a href="{% url 'products' %}?category=ski_hill">Ski Hill</a></li>
+                    <li class="list-inline-item"><a href="{% url 'products' %}?category=mountains">Mountains</a></li>
+                    <li class="list-inline-item"><a href="{% url 'products' %}?category=beach_water">Beach and Sea</a></li>
+                    <li class="list-inline-item"><a href="{% url 'products' %}?category=nature">Nature</a></li>
                 </ul>
                 <hr class="w-50 my-4">
             </div>
