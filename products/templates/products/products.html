@@ -10,7 +10,17 @@
                 <hr class="w-50">
                 <h2>Products</h2>
                 <ul class="list-inline my-3">
-                    <li class="list-inline-item">All</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All Products
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                            <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                            <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                            <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                        </div>
+                    </li>
                     <li class="list-inline-item">Ski Hill</li>
                     <li class="list-inline-item">Mountains</li>
                     <li class="list-inline-item">Beach</li>

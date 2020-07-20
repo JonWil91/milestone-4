@@ -1,4 +1,4 @@
-[{"pk": 1, "model": "products.product", "fields": {"sku": "0000000001", "name": "Silerstar Village", "description": "Shot of Silverstar village with the colour of sunrise", "price": 53.99, "category": 1, "rating": 4.6, "image": "IMG_0578.jpg"}},
+[{"pk": 1, "model": "products.product", "fields": {"sku": "0000000001", "name": "Silverstar Village", "description": "Shot of Silverstar village with the colour of sunrise", "price": 53.99, "category": 1, "rating": 4.6, "image": "IMG_0578.jpg"}},
 {"pk": 2, "model": "products.product", "fields": {"sku": "0000000002", "name": "Peyto Lake", "description": "View of Peyto Lake on a Sunny day", "price": 65.00, "category": 2, "rating": 4.7, "image": "IMG_600.jpg"}},
 {"pk": 3, "model": "products.product", "fields": {"sku": "0000000003", "name": "Perth beach", "description": "Sunset over beach in Perth", "price": 40.00, "category": 3, "rating": 4.7, "image": "IMG_3972.jpg"}},
 {"pk": 4, "model": "products.product", "fields": {"sku": "0000000004", "name": "Sinnington", "description": "Hikes through the woods in North Yorkshire", "price": 30.00, "category": 4, "rating": 4.7, "image": "IMG_0439.jpg"}}]
