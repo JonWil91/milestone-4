@@ -4,5 +4,29 @@
 {% block extra_title %}- Contact{% endblock %}
 
 {% block content %}
-<h1 class="display-4 text-success">It works</h1
->{% endblock %}
+            <div class="row text-center my-5">
+                <div class="col-12">
+                    <h1>Feel free to get in touch</h1>
+                </div>
+            </div>
+
+        <div class="container my-5 center-form">
+            <div class="row">
+                <div class="col-12">
+                    <div class="center-form">
+                        <form>
+                            <input type="text" name="name" id="fullname" class="form-control my-2" placeholder="Name" required />
+                            <input type="email" name="email" id="emailaddress" class="form-control my-2" placeholder="Email" required />
+                            <textarea rows="5" name="message" id="message" class="form-control my-2" placeholder="Message" required></textarea>
+                            <div class="form-row text-center">
+                                <div class="col my-3">
+                                    <button type="submit" class="btn btn-secondary contact-button">Send Request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    {% endblock %}
