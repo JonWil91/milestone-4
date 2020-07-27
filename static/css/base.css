@@ -25,8 +25,37 @@ body {
     display: flex;
 }
 
-.picture-border {
+#picture-border {
     border: solid;
     border-width: 7px;
+}
+
+.frame-colour-button {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.black-border {
+    border-color: black;
+}
+
+.brown {
+    background-color: brown;
+}
+
+#picture-border, .default-white {
     border-color: white;
 }
+
