@@ -4,13 +4,11 @@
 {% block extra_title %}- Blog{% endblock %}
 
 {% block content %}
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ blog.title }}</h5>
-            <p class="card-text">{{ blog.body}}</p>
-            <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.name }}">
-        </div>
-        </div>
+    <h1>{{ blog.title }} - <small>{{ blog.post_date }}</small></h1>
+    <br/>
+    <hr>
+    {{ blog.body }}
+    
 
 
 {% endblock %} 

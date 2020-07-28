@@ -7,7 +7,7 @@ from .models import BlogPost
 def all_blogs(request):
     """ A view to return the blog page """
 
-    blogs = BlogPost.objects.all()
+    blogs = BlogPost.objects.all().order_by('-post_date')
 
     context = {
         'blogs': blogs,
