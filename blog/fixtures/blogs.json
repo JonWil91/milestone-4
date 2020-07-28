@@ -1,0 +1,2 @@
+[{"pk": 1, "model": "blog.blogpost", "fields": {"title": "A blog post", "body": "This is the text of a blog post", "image": "IMG_0578.jpg"}},
+{"pk": 2, "model": "blog.blogpost", "fields": {"title": "Another blog post", "body": "Another peice of blog text", "image": "IMG_0578.jpg"}}]
