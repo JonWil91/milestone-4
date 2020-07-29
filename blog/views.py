@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import BlogPost
+from django.http import HttpResponseRedirect
+
 
 # Create your views here.
 
@@ -25,3 +27,9 @@ def blog_detail(request, blog_id):
     }
 
     return render(request, 'blog/blog_details.html', context)
+
+
+def like_view(request, pk):
+    blog = get_object_or_404(BlogPost, id=request.POST.get('blog_id'))
+    blog.likes.add(request.user)
+    return HttpResponseRedirect(reverse('blog_detail', args=[str(pk)]))

@@ -8,6 +8,7 @@ class BlogPost(models.Model):
     body = models.TextField()
     image = models.ImageField(blank=True)
     post_date = models.DateField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='blog_posts')
 
     def __str__(self):
         return self.title
