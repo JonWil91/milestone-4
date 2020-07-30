@@ -16,6 +16,22 @@
 	<button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button> {{ total_likes }} Likes
 </form>
 
+<br/>
+
+<h2>Comments</h2>
+
+{% if not blog.comments.all %}
+    No Comments yet...<a href="#">Add One</a>
+{% else %}
+    {% for comment in blog.comments.all %}
+        {{ comment.name }}
+        {{ comment.date_added }}
+        <br/>
+        {{ comment.body }}
+    {% endfor %}
+
+{% endif %}
+
 
 
 {% endblock %}
