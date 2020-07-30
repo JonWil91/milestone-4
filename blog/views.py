@@ -21,9 +21,11 @@ def blog_detail(request, blog_id):
     """ A view to show individual blog posts """
 
     blog = get_object_or_404(BlogPost, pk=blog_id)
+    total_likes = blog.total_likes
 
     context = {
         'blog': blog,
+        'total_likes': total_likes,
     }
 
     return render(request, 'blog/blog_details.html', context)
