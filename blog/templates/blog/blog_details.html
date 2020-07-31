@@ -13,21 +13,31 @@
 <hr>
 <form action="{% url 'like_post' blog.pk %}" method="POST">
 	{% csrf_token %}
-	<button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button> {{ total_likes }} Likes
+
+    {% if liked %}
+	    <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-danger btn-sm">Unlike</button>
+    {% else %}
+        <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button>
+    {% endif %}
+     {{ total_likes }} Likes
 </form>
 
 <br/>
 
 <h2>Comments</h2>
-
+<hr>
 {% if not blog.comments.all %}
     No Comments yet...<a href="#">Add One</a>
 {% else %}
     {% for comment in blog.comments.all %}
+        <strong>
         {{ comment.name }}
         {{ comment.date_added }}
+        </strong>
         <br/>
         {{ comment.body }}
+        <br/>
+        <hr>
     {% endfor %}
 
 {% endif %}

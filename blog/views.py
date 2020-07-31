@@ -23,9 +23,14 @@ def blog_detail(request, blog_id):
     blog = get_object_or_404(BlogPost, pk=blog_id)
     total_likes = blog.total_likes
 
+    liked = False
+    if blog.likes.exists():
+        liked = True
+
     context = {
         'blog': blog,
         'total_likes': total_likes,
+        'liked': liked,
     }
 
     return render(request, 'blog/blog_details.html', context)
@@ -33,5 +38,12 @@ def blog_detail(request, blog_id):
 
 def like_view(request, pk):
     blog = get_object_or_404(BlogPost, id=request.POST.get('blog_id'))
-    blog.likes.add(request.user)
+    liked = False
+    if blog.likes.filter(id=request.user.id).exists():
+        blog.likes.remove(request.user)
+        liked = False
+    else:
+        blog.likes.add(request.user)
+        liked = True
+  
     return HttpResponseRedirect(reverse('blog_detail', args=[str(pk)]))
