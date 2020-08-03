@@ -24,7 +24,7 @@ def blog_detail(request, blog_id):
     total_likes = blog.total_likes
 
     liked = False
-    if blog.likes.exists():
+    if blog.likes.filter(id=request.user.id).exists():
         liked = True
 
     context = {
