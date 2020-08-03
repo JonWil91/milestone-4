@@ -29,7 +29,8 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
-                    <p class="mb-0">{{ product.location }}</p>
+                    <p class="mb-0"><a href="{{ product.location_link }}" target="_blank">{{ product.location }}</a>
+                    <small>Click to view location on Google Maps</small></p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
