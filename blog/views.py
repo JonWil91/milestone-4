@@ -35,7 +35,7 @@ def blog_detail(request, blog_id):
 
     return render(request, 'blog/blog_details.html', context)
 
-
+# like_view taken from Codemy online tutorial
 def like_view(request, pk):
     blog = get_object_or_404(BlogPost, id=request.POST.get('blog_id'))
     liked = False
