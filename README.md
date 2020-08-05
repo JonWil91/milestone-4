@@ -76,4 +76,5 @@ def all_products(request):
         </div> -->
 taken from mini project
 
+bag views copied from mini project, apart from if/else size arguments removed as all products have a size
 
