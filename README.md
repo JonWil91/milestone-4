@@ -78,4 +78,4 @@ taken from mini project
 
 bag views copied from mini project, apart from if/else size arguments removed as all products have a size
 
-checkout models.py copied from mini project
+checkout models.py, admin.py copied from mini project
