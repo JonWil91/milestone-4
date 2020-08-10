@@ -11,8 +11,9 @@ def contact(request):
         form = ContactForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Message sent succesfully!')
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to send message. Please ensure the form is valid.')
     else:
         form = ContactForm()
         

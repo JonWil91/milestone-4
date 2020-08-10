@@ -20,8 +20,8 @@ class BlogPost(models.Model):
 class Comment(models.Model):
     """ Class to add comments, if BlogPost is deleted all associated comments are deleted """
     post = models.ForeignKey(BlogPost, related_name="comments", on_delete=models.CASCADE)
-    name = models.CharField(max_length=254)
-    body = models.TextField()
+    user = models.ForeignKey(User, default="user", on_delete=models.CASCADE)
+    body = models.TextField(default="comment body")
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #d6b0b0;
+    background-color: #c3d8e2;
 }
 
 .landing-page-image {
@@ -180,3 +180,34 @@ body {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+footer {
+    background-color: #666;
+
+}
+
+.social-site-footer {
+    height: 60px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+footer i {
+    font-size: 30px;
+    border: solid #666 4px;
+    border-radius: 50%;
+    background-color: #666;
+    color: white;
+    margin: 10px 10px;
+}
+
+.social-icon {
+    padding: 3px 4px 2px 4px;
+}
+
+.text-footer {
+    color: #ccc;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
