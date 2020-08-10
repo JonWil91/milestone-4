@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-        <div class="container my-5 center-form">
+        <!-- <div class="container my-5 center-form">
             <div class="row">
                 <div class="col-12">
                     <div class="center-form">
@@ -27,6 +27,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+
+
+        <form>
         
     {% endblock %}
