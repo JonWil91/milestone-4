@@ -80,6 +80,7 @@
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -128,17 +129,29 @@
         </div>
     {% endif %}
 
-    <!-- Content -->
+		<main id="page-container">
+            <!-- Main Content -->
+            {% block content %}
 
-   
-    
-    {% block content %}
+            {% endblock %}
+            <!-- Main Content     -->
+	    </main>
+
+    <footer id="footer"></footer>
+
+
+       
+    {% block postloadjs %}
+
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     
     {% endblock %}
 
-    <!-- /Content -->
-
-     <footer class="conainer-fluid">
+  </body>
+</html>
+     <!-- <footer class="conainer-fluid footer">
         <div class="social-site-footer">
             <a class="social-icon" target="_blank" href="#">
                 <i class="fab fa-facebook"></i>
@@ -159,16 +172,4 @@
         <div class="container text-footer">
             
         </div>
-    </footer>
-
-       
-    {% block postloadjs %}
-
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    
-    {% endblock %}
-
-  </body>
-</html>
+    </footer> -->

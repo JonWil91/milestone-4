@@ -19,7 +19,8 @@
     {% else %}
         <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button>
     {% endif %}
-     {{ total_likes }} Likes
+    <!-- fix this -->
+     {{ total_likes }} Like {{ likes|pluralize }}
 </form>
 
 <br/>
@@ -42,6 +43,10 @@
     {% endfor %}
 
 {% endif %}
+
+
+
+
 
 <a href="{% url 'all_blogs' %}" class="btn btn-outline-black rounded-0 mt-5">Back</a>
 

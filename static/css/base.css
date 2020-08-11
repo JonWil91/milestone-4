@@ -1,23 +1,7 @@
-.content {
-    flex: 1 0 auto;
-}
 
-.footer {
-  flex-shrink: 0;
-  width: 100%;
-  background: #639058;
-  color: #fafafa;
-  margin-bottom: 0;
-  margin-top: 50px;
-  text-align: right;
-}
-
-.footer-text {
-    text-align: right;
-}
-
-body {
+html, body {
     background-color: #c3d8e2;
+    height: 100%;
 }
 
 .landing-page-image {
@@ -58,6 +42,12 @@ body {
 #picture-border, .default-white {
     border-color: white;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+
 
 /* ------------------------------- bootstrap toasts */
 
@@ -181,9 +171,20 @@ body {
 	color: #17a2b8; /* text-info */
 }
 
-footer {
-    background-color: #666;
+/* ------------------------------- footer */
 
+/* footer {
+    background-color: #666;
+}
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  background: #639058;
+  color: #fafafa;
+  margin-bottom: 0;
+  margin-top: 50px;
+  text-align: right;
 }
 
 .social-site-footer {
@@ -209,5 +210,5 @@ footer i {
     color: #ccc;
     margin-top: 20px;
     padding-top: 10px;
-}
+} */
 
