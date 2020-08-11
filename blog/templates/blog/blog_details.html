@@ -4,52 +4,73 @@
 {% block extra_title %}- Blog{% endblock %}
 
 {% block content %}
-<h1>{{ blog.title }} - <small>{{ blog.post_date }}</small></h1>
-<br/>
-<hr>
-{{ blog.body }}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">{{ blog.title }} - <small>{{ blog.post_date }}</small></h1>
+            <br/>
 
-<br/>
-<hr>
-<form action="{% url 'like_post' blog.pk %}" method="POST">
-	{% csrf_token %}
+            <div class="row">
+            <div class="col-12 align-items-center justify-content-center">
+                <div class="image-container my-5">
+                    {% if blog.image %}
+                        <a href="{{ blog.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            </div>
 
-    {% if liked %}
-	    <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-danger btn-sm">Unlike</button>
-    {% else %}
-        <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button>
-    {% endif %}
-    <!-- fix this -->
-     {{ total_likes }} Like {{ likes|pluralize }}
-</form>
+            <hr>
+            <div class="text-center">{{ blog.body }}</div>
+            <br/>
+            <hr>
+            
+            <form action="{% url 'like_post' blog.pk %}" method="POST">
+                {% csrf_token %}
 
-<br/>
-
-<h2>Comments</h2>
-<hr>
-{% if not blog.comments.all %}
-    No Comments yet...<a href="#">Add One</a>
-{% else %}
-    {% for comment in blog.comments.all %}
-        <strong>
-        {{ comment.name }}
-        {{ comment.date_added }}
-        </strong>
-        <br/>
-        {{ comment.body }}
-        <br/>
-        <hr>
-        Add Comment
-    {% endfor %}
-
-{% endif %}
-
-
-
-
-
-<a href="{% url 'all_blogs' %}" class="btn btn-outline-black rounded-0 mt-5">Back</a>
-
-
-
+                {% if liked %}
+                    <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-danger btn-sm">Unlike</button>
+                {% else %}
+                    <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button>
+                {% endif %}
+                <!-- fix this -->
+                {{ total_likes }} Like {{ likes|pluralize }}
+            </form>
+            <br/>
+            <h2>Comments</h2>
+            <hr>
+            {% if not blog.comments.all %}
+                No Comments yet...<a href="#">Add One</a>
+            {% else %}
+                {% for comment in blog.comments.all %}
+                    <strong>
+                    {{ comment.name }}
+                    {{ comment.date_added }}
+                    </strong>
+                    <br/>
+                    {{ comment.body }}
+                    <br/>
+                    <hr>
+                    Add Comment
+                {% endfor %}
+            {% endif %}
+            <br/>
+            <br/>
+            {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
+                </small>
+            {% endif %}
+            <br/>
+            <a href="{% url 'all_blogs' %}" class="btn btn-outline-black rounded-0 mt-5">Back</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

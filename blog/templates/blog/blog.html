@@ -16,11 +16,11 @@
                                     <h5 class="card-title"><a href="{% url 'blog_detail' blog.id %}">{{ blog.title }} </a><small>{{ blog.post_date }}</small></h5>
                                     <p class="card-text">{{ blog.body}}</p>
                                     {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
                                 </div>
                             </div>
                     </div>
