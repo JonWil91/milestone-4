@@ -11,9 +11,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def all_blogs(request):
     """ A view to return the blog page """
-    # Assign all blog posts to a variable and order them by newest to oldest
+    # Assign all blog posts to a variable and order them newest to oldest
     blogs = BlogPost.objects.all().order_by('-post_date')
-    # paginator for blog posts with 4 orders per page
+    # paginator for blog posts with 4 posts per page
     paginator = Paginator(blogs, 4)
     page = request.GET.get('page')
 
