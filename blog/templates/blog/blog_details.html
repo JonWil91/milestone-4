@@ -39,11 +39,12 @@
                 <!-- fix this -->
                 {{ total_likes }} Like {{ likes|pluralize }}
             </form>
+            
             <br/>
             <h2>Comments</h2>
             <hr>
             {% if not blog.comments.all %}
-                No Comments yet...<a href="#">Add One</a>
+                No Comments yet...<a href="{% url 'add_comment' blog.id %}">Add One</a>
             {% else %}
                 {% for comment in blog.comments.all %}
                     <strong>
@@ -54,11 +55,12 @@
                     {{ comment.body }}
                     <br/>
                     <hr>
-                    Add Comment
                 {% endfor %}
+                    <a href="{% url 'add_comment' blog.id %}">Add Comment</a>
             {% endif %}
             <br/>
             <br/>
+
             {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 

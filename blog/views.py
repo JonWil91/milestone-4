@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import BlogPost
+from .models import BlogPost, Comment
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import BlogPostForm
+from .forms import BlogPostForm, CommentForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -121,6 +121,38 @@ def blog_detail(request, blog_id):
     return render(request, 'blog/blog_details.html', context)
 
 
+@login_required
+def add_comment(request, blog_id):
+    """ A view to add blog comment to a blog post """
+
+    blog = get_object_or_404(BlogPost, pk=blog_id)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = blog
+            comment.user = request.user
+            comment.save()
+            messages.success(request, 'Successfully added comment!')
+            return redirect(reverse('blog_detail', args=[blog_id]))
+        else:
+            messages.error(request, 'Failed to add comment. Please ensure the form is valid.')
+    else:
+        form = CommentForm()
+
+    template = 'blog/add_comment.html'
+
+    context = {
+        'form': form,
+        'blog': blog,
+    }
+
+    return render(request, template, context)
+
+    
+
+@login_required
 # like_view taken from Codemy online tutorial
 def like_view(request, pk):
     blog = get_object_or_404(BlogPost, id=request.POST.get('blog_id'))
