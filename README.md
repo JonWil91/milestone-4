@@ -79,3 +79,7 @@ taken from mini project
 bag views copied from mini project, apart from if/else size arguments removed as all products have a size
 
 checkout models.py, admin.py copied from mini project
+
+https://compressjpeg.com/ used to compress images
+
+pagination inspired by https://www.youtube.com/watch?v=N_TWOfLlc7A

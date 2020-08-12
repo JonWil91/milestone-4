@@ -70,7 +70,7 @@
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 {% if request.user.is_authenticated %}
-                                    <p class="my-0">{{ user.first_name }}</p>
+                                    <p class="my-0">{{ user }}</p>
                                 {% else %}
                                     <p class="my-0">My Account</p>
                                 {% endif %}

@@ -31,11 +31,10 @@
 
         <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        
-        <button type="submit">Send</button>
-
-
+            <div class="text-center">
+            {{ form.as_p }}
+                <button type="submit">Send</button>
+            </div>
         <form>
         
     {% endblock %}

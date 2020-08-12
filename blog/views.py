@@ -4,26 +4,40 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import BlogPostForm
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here.
 
-
 def all_blogs(request):
     """ A view to return the blog page """
-
+    # Assign all blog posts to a variable and order them by newest to oldest
     blogs = BlogPost.objects.all().order_by('-post_date')
+    # paginator for blog posts with 4 orders per page
+    paginator = Paginator(blogs, 4)
+    page = request.GET.get('page')
+
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
 
     context = {
         'blogs': blogs,
+        'page': page,
+        'posts': posts,
+
     }
     return render(request, 'blog/blog.html', context)
-
 
 
 @login_required
 def add_blog(request):
     """ Add a blog to the store """
+    # If a bug occurs and customers can access Blog Management, they will not be able to access the page
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse, 'home')
@@ -88,9 +102,6 @@ def delete_blog(request, blog_id):
     return redirect(reverse('all_blogs'))
 
 
-
-
-
 def blog_detail(request, blog_id):
     """ A view to show individual blog posts """
 
@@ -109,6 +120,7 @@ def blog_detail(request, blog_id):
 
     return render(request, 'blog/blog_details.html', context)
 
+
 # like_view taken from Codemy online tutorial
 def like_view(request, pk):
     blog = get_object_or_404(BlogPost, id=request.POST.get('blog_id'))
@@ -119,31 +131,6 @@ def like_view(request, pk):
     else:
         blog.likes.add(request.user)
         liked = True
-  
+
     return HttpResponseRedirect(reverse('blog_detail', args=[str(pk)]))
 
-
-@login_required
-def add_comment(request):
-    """ Add a product to the store """
-    if not request.user.authenticated:
-        messages.error(request, 'Sorry, only store owners can do that')
-        return redirect(reverse, 'home')
-
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
-    else:
-        form = ProductForm()
-
-    template = 'products/add_product.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
