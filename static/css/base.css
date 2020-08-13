@@ -1,7 +1,12 @@
-
 html, body {
-    background-color: #c3d8e2;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #c3d8e2;
+}
+
+#page-container {
+    height: 100vh;;
 }
 
 .landing-page-image {
@@ -173,10 +178,6 @@ a:hover {
 
 /* ------------------------------- footer */
 
-/* footer {
-    background-color: #666;
-}
-
 .footer {
   flex-shrink: 0;
   width: 100%;
@@ -184,21 +185,14 @@ a:hover {
   color: #fafafa;
   margin-bottom: 0;
   margin-top: 50px;
-  text-align: right;
-}
-
-.social-site-footer {
-    height: 60px;
-    text-align: center;
-    background-color: #f8f9fa;
 }
 
 footer i {
     font-size: 30px;
-    border: solid #666 4px;
+    border: solid #fafafa 5px;
     border-radius: 50%;
-    background-color: #666;
-    color: white;
+    background-color: #fafafa;
+    color: grey;
     margin: 10px 10px;
 }
 
@@ -210,6 +204,6 @@ footer i {
     color: #ccc;
     margin-top: 20px;
     padding-top: 10px;
-} */
+}
 
 
