@@ -17,13 +17,7 @@ def all_blogs(request):
     paginator = Paginator(blogs, 4)
     page = request.GET.get('page')
 
-    try:
-        posts = paginator.page(page)
-    except PageNotAnInteger:
-        posts = paginator.page(1)
-
-    except EmptyPage:
-        posts = paginator.page(paginator.num_pages)
+    posts = paginator.get_page(page)
 
     context = {
         'blogs': blogs,
