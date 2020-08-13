@@ -12,7 +12,7 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-10 col-lg-5 offset-lg-2 mx-auto">
                 <div id="picture-border" class="image-container my-5 default-white">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
@@ -24,12 +24,13 @@
                         </a>
                     {% endif %}
                 </div>
+                <p class="text-center"><small>Click the link below to view location on Google Maps</small></p>
+                <p class="mb-3 text-center"><a href="{{ product.location_link }}" target="_blank">{{ product.location }}</a></p>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center">
-                <div class="product-details-container mb-5 mt-md-5">
+            <div class="col-12 col-lg-6 text-center">
+                <div class="product-details-container mb-5 mt-md-4">
                     <h2 class="mb-2">{{ product.name }}</h2>
-                    <p><small>Click the link below to view location on Google Maps</small></p>
-                    <p class="mb-1"><a href="{{ product.location_link }}" target="_blank">{{ product.location }}</a></p>
+                    
                     <p class="lead mb-1 font-weight-bold">£{{ product.price }}</p>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
@@ -96,14 +97,14 @@
                                 
                                 {% endif %}
                             
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <div class="col-12">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-1">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-1" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
