@@ -206,4 +206,19 @@ footer i {
     padding-top: 10px;
 }
 
+.text-box {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fafafa;
+    margin: 10px;
+    padding: 20px;
+    background-color: purple;
+    color: #fafafa;
+    -webkit-appearance: none;
+    width: 50px;
+}
+
+a {
+    color: black;
+}
 
