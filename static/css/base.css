@@ -5,8 +5,9 @@ html, body {
   background-color: #c3d8e2;
 }
 
+
 #page-container {
-    height: 100vh;;
+    height: 100%;;
 }
 
 .landing-page-image {
@@ -260,3 +261,31 @@ a {
 }
 
 /* /Button css  */
+
+#blueDiv {
+    top: 100px;
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+}
+
+#yellowDiv {
+    top: 100px;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+#redDiv {
+    top: 100px;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+#greenDiv {
+    top: 100px;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}

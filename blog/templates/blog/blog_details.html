@@ -36,8 +36,7 @@
                 {% else %}
                     <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button>
                 {% endif %}
-                <!-- fix this -->
-                {{ total_likes }} Like {{ likes|pluralize }}
+                {{ total_likes }} Like{{ total_likes|pluralize }}
             </form>
             
             <br/>

@@ -117,24 +117,23 @@
 
 
 
+<button onclick="blue()">Change the colour to blue</button>
+<button onclick="yellow()">Change the colour to yellow</button>
+<button onclick="red()">Change the colour to red</button>
+<button onclick="green()">Change the colour to green</button>
+
+<div id="blueDiv">
+</div>
+
+
 
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<script src="{% static 'products/js/frame_colour.js' %}"></script>
 {% endblock %}
-
-
-
-<script type="text/javascript">
-
-  
-
-
-
-
-</script>
 
 
 

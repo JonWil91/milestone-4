@@ -42,7 +42,7 @@
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search the site">
@@ -128,11 +128,13 @@
         </div>
     {% endif %}
 
-            <!-- Main Content -->
-            {% block content %}
-            
-            {% endblock %}
-            <!-- Main Content     -->
+        <!-- Main Content -->
+        {% block content %}
+        
+        {% endblock %}
+        <!-- /Main Content -->
+
+        <!-- Footer -->
 
      <footer class="conainer-fluid footer">
         <div class="text-footer">
@@ -148,7 +150,6 @@
                     <p>
                         <i class="fas fa-fax mr-3"></i>+ 01 234 567 89</p>
                 </div>
-
                 <div class="col-md-4 col-lg-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Legal</h6>
                     <a href="#"><p class="text-footer">Terms and Conditions</p></a>
@@ -156,9 +157,6 @@
                     <a href="#"><p class="text-footer">Privacy Policy</p></a>
                     <p></p>
                 </div>
-
-                
-
                 <div class="col-md-4 col-lg-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Social Media</h6>
                     <ul class="list-unstyled">
@@ -177,7 +175,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="row">
                 <div class="col text-center">
                 <p class="text-center text-white">© 2020 Copyright: JW Photography - JW Photography is a company registered
@@ -188,15 +185,13 @@
         </div>
     </footer>
 
-
+    <!-- /Footer -->
        
     {% block postloadjs %}
 
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-    
     {% endblock %}
-
   </body>
 </html>
