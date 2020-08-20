@@ -54,8 +54,7 @@
                     <br/>
                     {{ comment.body }}
                     {% if request.user == comment.user %}
-                    <!-- url delete_comment comment.id -->
-                        <a href="#"
+                        <a href="{% url 'delete_comment' comment.id %}"
                             class="text-danger">Delete Comment</a>
                     {% endif %}
                     <br/>

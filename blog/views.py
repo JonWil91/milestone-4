@@ -145,21 +145,21 @@ def add_comment(request, blog_id):
     return render(request, template, context)
 
 
-# @login_required
-# def delete_comment(request, comment_id):
-#     """
-#     Allow a user to delete their own comments and remove from the db. If its not their comment they should be thrown
-#     and error message.
-#     """
-#     comment = get_object_or_404(Comment, pk=comment_id)
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Allow a user to delete their own comments and remove from the db. If its not their comment they should be thrown
+    and error message.
+    """
+    comment = get_object_or_404(Comment, pk=comment_id)
 
-#     if request.user == comment.comment_user:
-#         comment.delete()
-#         messages.success(request, 'You have successfully deleted your comment.')
-#         return redirect('all_blogs')
-#     else:
-#         messages.error(request, 'Sorry, you cannot delete another users comment.')
-#         return redirect('all_blogs')
+    if request.user == comment.user:
+        comment.delete()
+        messages.success(request, 'You have successfully deleted your comment.')
+        return redirect('all_blogs')
+    else:
+        messages.error(request, 'Sorry, you cannot delete another users comment.')
+        return redirect('all_blogs')
 
 
 @login_required
