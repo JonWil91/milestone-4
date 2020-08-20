@@ -7,7 +7,7 @@ from products.models import Product, Category
 def index(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all().order_by('-price')
+    products = Product.objects.all().order_by('-rating')[:3]
     
 
 
