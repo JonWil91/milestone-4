@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-10 col-lg-5 offset-lg-2 mx-auto">
-                <div id="picture-border" class="image-container my-5 default-white">
+                <div id="picture-border" class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -46,6 +46,7 @@
                         <button class="frame-colour-button black"></button>
                         <button class="frame-colour-button brown"></button>
                     </div>
+
                      <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -113,6 +114,10 @@
             </div>
         </div>
     </div>
+
+
+
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -120,17 +125,16 @@
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
 
-<!-- onclick(document.getElementById(border).color = color -->
 
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
-    $(".black").click(function(){
-        $("#picture-border").removeClass('default-white');
-        $("#picture-border").addClass('black-border');
-    });
+  
 
-</script> -->
+
+
+
+</script>
 
 
 

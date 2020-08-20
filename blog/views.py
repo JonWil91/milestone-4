@@ -159,7 +159,8 @@ def add_comment(request, blog_id):
 #         return redirect('all_blogs')
 #     else:
 #         messages.error(request, 'Sorry, you cannot delete another users comment.')
-#         return redirect('index')
+#         return redirect('all_blogs')
+
 
 @login_required
 # like_view taken from Codemy online tutorial
