@@ -32,7 +32,7 @@ This website would provide value to a user as it provides a number of different 
 
 ## UX
 
-The user is able to peruse all available products in the gallery page, this could be achieved by viewing all products as initially displayed, filerting by price/rating/category, or selecting the a specific category of interest. This allows the user to filter the products in a broad sense or to narrow down the field to a particular type of product. A user has the ability to register as a user, or login if a previous account has been created, and then add items to a bag and  proceed to checkout to make the purchase.
+The user is able to peruse all available products in the gallery page, this could be achieved by viewing all products as initially displayed, filerting by price/rating/category, or selecting the specific category of interest. This allows the user to filter the products in a broad sense or to narrow down the field to a particular type of product. A user has the ability to register as a user, or login if a previous account has been created, and then add items to a bag and  proceed to checkout to make the purchase.
 
 User's also have the ability to use the contact page to send a message to the admin panel, or to view the blog page to read, comment and like various blog posts, as long as they are logged in.
 
@@ -44,14 +44,13 @@ As a user on a mobile/tablet or desktop device I would:
 * Want to click the Blog link in the navbar and visit the blog page
 * Want to click the Gallery button in the navbar and visit the Gallery page
 * Want to click the user Account button in the navbar and have an option
-to view the user account if signed in or sign out
+to view the user account if signed in, and if not signed in then the option to sign out
 * Want the user Account button to provide an option to sign in or register as a new user if one has not already been created
 * Want the user profile button to take me to a user profile page
 * Want the sign out button to give me the option to sign out as a user
 
 
-* Want the blog page to have blogs laid out in a clear structure and to span
-multiple pages if needed
+* Want the blog page to have blogs laid out in a clear structure
 * Want to click individual blogs and view their content
 * Want to be able to comment or like individual blog posts and have the 
 input displayed clearly and added to the post
@@ -83,9 +82,11 @@ via a responsive message
 
 As a site owner I:
 
+* Want to be able to add products to the site from within the Account button
+* Want to be able to edit/delete products from either the main products page or from individual products details pages
 * Want to be able to add blog posts to the site from within the Account button
 * Want to be able to edit/delete blog posts from either the main blog page or from individual blog posts
-* Want to be able to edit/delete blog posts from either the main blog page or from individual blog posts
+
 
 ## Colour Scheme
 
@@ -105,7 +106,7 @@ The 'CRUD' operations are featured throughout the website as it is possible for 
 * **Navbar** - On all devices the navbar has a brand logo in the top left hand corner which takes the user to the home page. The navigational links are contained within a burger menu on tablet and mobile devices in the top right hand corner. Rather than these links dropping down in a vertial list as is the norm, on tablet the 6 navigational links are displayed in a row, and on mobile they are displayed as two rows of three as this looks clear and appealing for the user. There is a search bar which is used to search for names or descriptions of products in the Gallery page. This search bar is displayed next to the brand logo on desktop, and on tablet and mobile is displayed central and below the brand logo and burger menu. There is also a link to the user's cart, which is presented with a cart logo and a number demonstrating the current value added to the cart, starting at £0.00.
 -- The Account button in the navbar will display differently depending on the user's log in status. If a user is not logged in the Account button will drop down to provide the user the option to regiser or log in. If a user is logged in, the Account button will change from 'Account' to the user's username. The button will also dropdown with an option to view their profile or log out. If a Superuser is logged in, the Account dropdown will also include Product Management and Blog management, in which new products or blog posts can be added to the site.
 
-* **Messages** - When a user makes various actions, or actions fail to execute a message appears at the top right corner of the screen.
+* **Messages** - When a user makes various actions, or actions fail to execute, a message appears at the top right corner of the screen.
 
 * **Register** - When a user clicks the Account dropdown and selects register, they are presented with a form to fill out. They have to fill in their email address two separate times, ensuring they match, a username, and a password twice, again ensuring they match.
 
@@ -116,12 +117,12 @@ The 'CRUD' operations are featured throughout the website as it is possible for 
 * **Blog Comments** - On each individual blog post, provided a user is logged in they are able to add a comment. Clicking the add comment button takes them to a form on a separate page, and then after filling in a comment and submitting it they are redirected to the post with the comment below. 
 -- If a user is not logged in and tries to add a comment they are directed to the log in page, as a user needs to be logged in for this feature. Once a user has added a comment, their comment will be displayed with an option to delete the comment. This only appears next to comments created by that user.
 
-* **Blog Likes** - On each individual blog post, provided a user is logged in they are able to like it by clicking the like button. This will change the blue 'like' button to a red 'unlike' button if they wish to reverse this decision. Each additional is displayed as a total number next to the like button.
--- If a user is not logged in and tries to add a comment they are directed to the log in page, as a user needs to be logged in for this feature.
+* **Blog Likes** - On each individual blog post, provided a user is logged in they are able to like it by clicking the like button. This will change the blue 'like' button to a red 'unlike' button if they wish to reverse this decision. Each additional like is displayed as a total number of likes next to the like button.
+-- If a user is not logged in and tries to add a like they are directed to the log in page, as a user needs to be logged in for this feature.
 
 * **Pagination** - The Blogs page uses a pagination feature, only displaying 4 blog posts on a single page. If there are additional blog posts a next button is available to click. After clicking the next button, there is then an option to click previous to return to the previous page, or next again if there are additional pages. In the middle of the next and previous buttons is a box highlighting how many pages there are in total and what page number the user is on.
 
-* **Superuser** - If a user is logged in as a Superuser they will have a different display to regular users. On the Account button they have access to the Product and Blog Management pages. They also have access to the CRUD operations on the blog, blog details, gallery and gallery details pages to update and delete blog posts or products from the store.
+* **Superuser** - If a user is logged in as a Superuser they will have a different display to regular users. On the Account button they have access to the Product and Blog Management pages. They also have access to the CRUD operations on the home, blog, blog details, gallery and gallery details pages to update and delete blog posts or products from the store.
 
 * **Contact**  - The contact page has a simple contact form, the user is required to fill in each field. Once submitted the user is redirected to the home page, a confirmation message appears in the top corner of the screen. This message is then saved in the admin panel.
 
@@ -215,6 +216,8 @@ Once you have met the above criteria you would be ready to clone this project to
 * Ensure you have navigated to the correct file location using the 'cd' command
 * The next step would be to create a file named 'env.py', this will be an important file for safely storying your credentials. 
 * The next required step would be ensuring you have an up to date requirements.txt file. This can be initialised by typing 'sudo -H pip3 -r requirements.txt' into the terminal, the syntax may differ slightly between IDE's as for use in GitPod the 'sudo' element was not required.
+* Next you would be required to make migrations to the database. This would be done in two steps: python3 manage.py makemigrations, and then python3 manage.py migrate
+* After migrations are made you would need to load the data from the fixtures. This has to be done in this order: python3 manage.py loadata categories, python3 manage.py loadata products. An error will occur if you try and load products before categories.
 
 Once these steps have been completed you have everything ready to run the application. If you are using the GitPod IDE you would run the command python3 manage.py runserver which will initialise the app and give you the prompt to expose the local host you are running and open it on a browser.
 
