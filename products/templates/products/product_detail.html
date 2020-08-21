@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-10 col-lg-5 offset-lg-2 mx-auto">
-                <div id="picture-border" class="image-container my-5">
+                <div id="border-colour" class="picture-border image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -42,9 +42,9 @@
                     <div>
                         <h4 class="my-2">Frame Colour</h4>
                         <p><small>Help decide what colour frame would look good with your picture</small></p>
-                        <button class="frame-colour-button white"></button>
-                        <button class="frame-colour-button black"></button>
-                        <button class="frame-colour-button brown"></button>
+                        <button onclick="white()" class="frame-colour-button white-button"></button>
+                        <button onclick="black()" class="frame-colour-button black-button"></button>
+                        <button onclick="brown()" class="frame-colour-button brown-button"></button>
                     </div>
 
                      <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -91,7 +91,7 @@
                                 {% if request.user.is_superuser %}
                                 <div class="col-12">
                                     <small class="mx-auto">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                        <a class="edit-button" href="{% url 'edit_product' product.id %}">Edit</a> | 
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                 </div>
@@ -114,17 +114,6 @@
             </div>
         </div>
     </div>
-
-
-
-<button onclick="blue()">Change the colour to blue</button>
-<button onclick="yellow()">Change the colour to yellow</button>
-<button onclick="red()">Change the colour to red</button>
-<button onclick="green()">Change the colour to green</button>
-
-<div id="blueDiv">
-</div>
-
 
 
 {% endblock %}

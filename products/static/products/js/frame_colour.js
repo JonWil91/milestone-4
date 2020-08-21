@@ -1,17 +1,13 @@
-let div = document.getElementById("blueDiv");
+let div = document.getElementById("border-colour");
 
-    function blue() {
-        div.setAttribute("id", "blueDiv");
+    function white() {
+        div.setAttribute("id", "white");
     }
 
-    function yellow() {
-        div.setAttribute("id", "yellowDiv");
+    function black() {
+        div.setAttribute("id", "black");
     }
 
-    function red() {
-        div.setAttribute("id", "redDiv");
-    }
-
-    function green() {
-        div.setAttribute("id", "greenDiv");
+    function brown() {
+        div.setAttribute("id", "brown");
     }

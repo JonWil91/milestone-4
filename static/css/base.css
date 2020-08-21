@@ -5,21 +5,19 @@ html, body {
   background-color: #c3d8e2;
 }
 
-
 #page-container {
     height: 100%;;
 }
 
-.landing-page-image {
-    position: relative;
-    display: flex;
-}
-
-#picture-border {
+.picture-border {
     border: solid;
     border-width: 7px;
+}
+
+#border-colour {
     color: white;
 }
+
 
 .frame-colour-button {
     border-radius: 50%;
@@ -30,25 +28,36 @@ html, body {
     border-width: 2px;
 }
 
-.white {
+#white {
+    border: solid;
+    border-width: 7px;
+    color: white;
+}
+
+#black {
+    border: solid;
+    border-width: 7px;
+    color: black;
+}
+
+#brown {
+    border: solid;
+    border-width: 7px;
+    color: brown;
+}
+
+.white-button {
     background-color: white;
 }
 
-.black {
+.black-button {
     background-color: black;
 }
 
-.black-border {
-    border-color: black;
-}
-
-.brown {
+.brown-button {
     background-color: brown;
 }
 
-#picture-border, .default-white {
-    border-color: white;
-}
 
 a:hover {
     text-decoration: none;
@@ -183,10 +192,14 @@ a:hover {
 .footer {
   flex-shrink: 0;
   width: 100%;
-  background: #639058;
+  background: #6f6f6f;
   color: #fafafa;
   margin-bottom: 0;
   margin-top: 50px;
+}
+
+.social-footer {
+    background-color: #f8f9fa;
 }
 
 footer i {
@@ -262,30 +275,8 @@ a {
 
 /* /Button css  */
 
-#blueDiv {
-    top: 100px;
-    background-color: lightblue;
-    width: 200px;
-    height: 200px;
-}
 
-#yellowDiv {
-    top: 100px;
-    background-color: yellow;
-    width: 200px;
-    height: 200px;
-}
 
-#redDiv {
-    top: 100px;
-    background-color: red;
-    width: 200px;
-    height: 200px;
-}
-
-#greenDiv {
-    top: 100px;
-    background-color: green;
-    width: 200px;
-    height: 200px;
+.edit-button {
+    color: blue;
 }
