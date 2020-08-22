@@ -32,7 +32,9 @@ This website would provide value to a user as it provides a number of different 
 
 ## UX
 
-The user is able to peruse all available products in the gallery page, this could be achieved by viewing all products as initially displayed, filerting by price/rating/category, or selecting the specific category of interest. This allows the user to filter the products in a broad sense or to narrow down the field to a particular type of product. A user has the ability to register as a user, or login if a previous account has been created, and then add items to a bag and  proceed to checkout to make the purchase.
+It is made clear to the user that the site is an e-commerce site from the home page due to the clear title and supporting text above the three currently top rated products from the store. The user is able to view these products immidiately or visit the gallery page.
+
+The user is able to peruse all available products in the gallery page, this could be achieved by viewing all products as initially displayed, filtering by price/rating/category, or selecting the specific category of interest. This allows the user to filter the products in a broad sense or to narrow down the field to a particular type of product. A user has the ability to register as a user, or login if a previous account has been created, and then add items to a bag and  proceed to checkout to make the purchase.
 
 User's also have the ability to use the contact page to send a message to the admin panel, or to view the blog page to read, comment and like various blog posts, as long as they are logged in.
 
@@ -44,7 +46,7 @@ As a user on a mobile/tablet or desktop device I would:
 * Want to click the Blog link in the navbar and visit the blog page
 * Want to click the Gallery button in the navbar and visit the Gallery page
 * Want to click the user Account button in the navbar and have an option
-to view the user account if signed in, and if not signed in then the option to sign out
+to view the user account if signed in, and if not signed in then the option to sign in
 * Want the user Account button to provide an option to sign in or register as a new user if one has not already been created
 * Want the user profile button to take me to a user profile page
 * Want the sign out button to give me the option to sign out as a user
@@ -90,11 +92,19 @@ As a site owner I:
 
 ## Colour Scheme
 
+I approched this project with a simple minimalist colour scheme in mind, as the main focus is presenting photos that stand out for customers to purchase. The Navbar is a simple off white (#f8f9fa) background with black text and font awesome icons to stand out clearly. The shopping cart icon and product cost are highlighted in a light shade of blue (#17a2b8) to stand out both from the Navbar background and the background colour of the content.
 
+The body background colour throughout is a very light shade of blue (#c3d8e2) so as to not take focus from the products being sold, and so that all text and content is clear and easy to read.
+
+As the photos are intended to be the focus of colour on most pages, I opted to leave the headings as black to make them clear and legible.
+
+The top row of the Footer uses the same grey colour as the Header to display the social media icons in a darker grey (#6f6f6f) to make them stand out. The text footer below this contrasts this by using the same dark grey colour as a background, but using the off white (#f8f9fa) as the icon colours.
+
+Throughout the site blue is used as a colour to signify an option to edit/update, whilst red is associated with removing or deleting content.
 
 ### Wireframes
 
-I decided to use handrawn wireframes for this project, as there is a lot on features on certain pages which would be easier to reflect by hand. For the most part the wireframes match up with the final product, with the exception of the introduction to pagination and an alteration to the product details pages, which were introduced during the production process.
+I decided to use handrawn wireframes for this project, as there are a lot of features on certain pages which would be easier to reflect by hand. For the most part the wireframes match up with the final product, with the exception of the introduction to pagination and an alteration to the product details pages, which were introduced during the production process.
 
 ## Features
 
@@ -131,11 +141,13 @@ The 'CRUD' operations are featured throughout the website as it is possible for 
 
 * **Frame Colour** - A simple frame colour selector on the product details page allows the user to see what the selected photo product would look like with different coloured frames
 
+* **Home Page** - The home page presents the top 3 rated products in the store. They change based on product ratings.
+
 ### Additional features to be implemented:
 
 * I would like to enable the search bar in the navbar to search for data in the blog page as well as the products page
-* I would like to add a functional email system in which the user receives an actual email confirmation after registering
-* I would like to add a functional email system where a buisness email could receive emails submitted from the contact form
+* I would like to add pagination to the gallery page, so that users only view a smaller number of products on each page on mobile but can view more on tablet and desktop
+* I would like to add JavaScript to the home page products to make them more dynamic and appealing upon visiting the website
 
 ## Technologies Used
 
@@ -169,6 +181,10 @@ The 'CRUD' operations are featured throughout the website as it is possible for 
     - The project uses **Git** as version control
 * [Heroku](https://dashboard.heroku.com/apps)
     - The project uses **Heroku** as the hosting platform
+* [Postgres](https://www.postgresql.org/)
+    - The project uses **Postgres** as the database upon deployment to Heroku
+* [AWS - S3](https://aws.amazon.com/s3/)
+    - The project uses **AWS S3** as an object storage service for static files and media files
 
 ## Testing
 
@@ -185,7 +201,7 @@ All of the testing for this project was done manually, however online validators
 * I used the W3C HTML Validator tool to validate my HTML code. The W3C Validator tool doesn't recognise the Jinja templating, which resulted in it showing a lot of errors in relation to the Jinja code. This meant carefully going through such html files to ensure that they were formatted correctly.
 * I used the W3C CSS Validator tool to validate my CSS code.
 * I used the JSHint tool to validate my JavaScript syntax.
-* I used the Pep8 Online tool to validate my Python syntax. Had to update a number of lines that were too long and blank spaces I had initially missed.
+* I used the Pep8 Online tool to validate my Python syntax. I had to update a number of lines that were too long and blank spaces I had initially missed.
 
 ## Compatability
 
@@ -227,10 +243,11 @@ This website has been deployed on Heroku using the master branch on GitHub. To h
 
 1. Sign up and create a free Heroku account and create a new app for later deployment
 2. Create a requirements.txt file so that Heroku can install the necessary dependencies to run the app. In the CLI terminal type 'pip3 freeze --local > requirements.txt'
-3. Create a Procfile which will tell Heroku what type of application is being deployed and how to run it. In the CLI terminal type 'echo web: python run.py > Procfile'
+3. Create a Procfile which will tell Heroku what type of application is being deployed and how to run it.
 4. In Heroku after creating the project app, click the 'Deploy' tab, choose GitHub as your deployment method and select Enable Automatic Deployment.
-5. Select the Settings tab next and click the 'Reveal Config Vars' button. You will then need to input the following details:
-
+5. Create an AWS account, set up an S3 bucket, create a user and policy to authorise
+6. Link the AWS account to Heroku and the IDE
+7. Select the Settings tab next and click the 'Reveal Config Vars' button. You will then need to input the all secret key data that you do not want to be caught in version control due to risk of users being able to cause malicious damage.
 
 Once these steps have been followed you will be ready to deploy your website to Heroku.
 
