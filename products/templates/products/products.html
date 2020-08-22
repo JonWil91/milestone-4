@@ -12,7 +12,7 @@
                 <ul class="list-inline list-unstyled products my-3">
                     <li class="nav-item dropdown list-inline-item">
                         <a class="nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All Products
+                            All Products <i class="fas fa-caret-down"></i>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                             <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
@@ -21,10 +21,10 @@
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </div>
                     </li>
-                    <li class="list-inline-item product-category"><a href="{% url 'products' %}?category=ski_hill">Ski Hill</a></li>
-                    <li class="list-inline-item product-category"><a href="{% url 'products' %}?category=mountains">Mountains</a></li>
-                    <li class="list-inline-item product-category"><a href="{% url 'products' %}?category=beach_water">Beach and Sea</a></li>
-                    <li class="list-inline-item product-category"><a href="{% url 'products' %}?category=nature">Nature</a></li>
+                    <strong><li class="list-inline-item product-category"><a href="{% url 'products' %}?category=ski_hill">Ski Hill</a></li></strong>
+                    <strong><li class="list-inline-item product-category"><a href="{% url 'products' %}?category=mountains">Mountains</a></li></strong>
+                    <strong><li class="list-inline-item product-category"><a href="{% url 'products' %}?category=beach_water">Beach and Sea</a></li></strong>
+                    <strong><li class="list-inline-item product-category"><a href="{% url 'products' %}?category=nature">Nature</a></li></strong>
                 </ul>
                 <hr class="w-50 my-4">
             </div>

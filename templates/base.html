@@ -78,8 +78,8 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Add Blog</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -108,7 +108,6 @@
         </div>
     </nav>
     <!-- /Navbar -->
-
 
     {% if messages %}
         <div class="message-container">
@@ -160,7 +159,7 @@
                     <p>
                         <a href="{% url 'contact' %}"><i class="far fa-envelope mr-3"></i></a>info@jwphotography.com</p>
                     <p>
-                        <i class="fas fa-phone mr-3"></i> + 01 234 567 89</p>
+                        <i class="fas fa-phone mr-3"></i>+ 01 234 567 89</p>
                     <p>
                         <i class="fas fa-fax mr-3"></i>+ 01 234 567 89</p>
                 </div>
@@ -171,7 +170,6 @@
                     <a href="#"><p class="text-footer">Privacy Policy</p></a>
                     <p></p>
                 </div>
-            
             </div>
             <div class="row">
                 <div class="col text-center my-1">
@@ -182,7 +180,6 @@
             </div>
         </div>
     </footer>
-
     <!-- /Footer -->
        
     {% block postloadjs %}
