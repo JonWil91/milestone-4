@@ -43,7 +43,8 @@
             <h2>Comments</h2>
             <hr>
             {% if not blog.comments.all %}
-                No Comments yet...<a href="{% url 'add_comment' blog.id %}">Add One</a>
+                No Comments yet -
+                <a href="{% url 'add_comment' blog.id %}"><strong>Add One</strong></a>
             {% else %}
                 {% for comment in blog.comments.all %}
                     <strong>
@@ -59,7 +60,7 @@
                     <br/>
                     <hr>
                 {% endfor %}
-                    <a href="{% url 'add_comment' blog.id %}">Add Comment</a>
+                    <a href="{% url 'add_comment' blog.id %}" class="btn btn-outline-black rounded-0">Add Comment</a>
             {% endif %}
             <br/>
             <br/>

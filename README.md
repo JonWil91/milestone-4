@@ -17,6 +17,7 @@ This website would provide value to a user as it provides a number of different 
     - [**Colour Scheme**](#colour-scheme)
     - [**Wireframes**](#wireframes)
 * [**Features**](#features)
+    - [**Existing Features**](#existing-features)
     - [**Additional Features to be Implemented**](#additional-features-to-be-implemented)
 * [**Technologies Used**](#technologies-used)
 * [**Testing**](#testing)
@@ -38,59 +39,63 @@ The user is able to peruse all available products in the gallery page, this coul
 
 User's also have the ability to use the contact page to send a message to the admin panel, or to view the blog page to read, comment and like various blog posts, as long as they are logged in.
 
-## User stories:
+User types woud be split into the following categories:
+	- Visitor - Person on the website (not necessarily registered with an account)
+	- Registered User - Person on the website with an account
+    -Admin - Owner of the website (logged in)
 
-As a user on a mobile/tablet or desktop device I would:
+### User stories:
 
-* Want to have a clear idea of the website purpose after visiting the home page
-* Want to click the Blog link in the navbar and visit the blog page
-* Want to click the Gallery button in the navbar and visit the Gallery page
-* Want to click the user Account button in the navbar and have an option
-to view the user account if signed in, and if not signed in then the option to sign in
-* Want the user Account button to provide an option to sign in or register as a new user if one has not already been created
-* Want the user profile button to take me to a user profile page
-* Want the sign out button to give me the option to sign out as a user
+**Blog**
+1. As a visitor I want to be able to view an overview of the latest blog posts
+2. As a visitor I want to be able to view a single, full blog post
+3. As a registered user, I want to be able to comment on a single blog post
+4. As a registered user, I want to be able to like a single blog post
 
+**Search**
+1. As a visitor I want to be able to find products within the site based on typing in keywords into the search bar
 
-* Want the blog page to have blogs laid out in a clear structure
-* Want to click individual blogs and view their content
-* Want to be able to comment or like individual blog posts and have the 
-input displayed clearly and added to the post
+**Gallery**
+1. As a visitor I want to be able to view an overview of the products available
+2. As a visitor I want to be able to filter the products displayed
+3. As a visitor I want to be able to view individual product details
+4. As a registered user, I want to be able to add a product into the shopping cart
 
+**Contact**
+1. As a visitor I want to be able to submit a message to the site admin
+2. As an admin I want to be able to view messages submitted by visitors and users
 
-* Want the Gallery page to have all existing products displayed in a clear format
-* Want the All Products dropdown button to give an option to filter the total range of 
-products by price/category/rating
-* Want to be able to view a set of products by category by clicking each individual
-category link
-* Want to be able to click each product for additional details
-* Want the product details page to have a larger image, the location link
-to show in a separate page the location of the image on Google Maps, to be able to 
-choose a size or quantity of the product, to view the product with different coloured
-frames and finally to be able to add the product to a shopping cart
+**Account / Authentication**
+1. As a visitor I want to be able to register for an account
+2. As a registered user I want to be able to login to my account 
+3. As a registered user I want to be able to log out of my account
 
+**Shopping Bag**
+1. As a registered user I want to be able to view my shopping bag 
+2. As a registered user I want to be able to edit the items in my shopping bag
+3. As a registered user I want to be able to remove an item from my shopping bag
 
-* Want the contact page to have a clear and simple form to fill in
-* Want the contact form to confirm that the message has been submitted and received
-via a responsive message
+**Checkout**
+1. As a registered user I want to be able to securely checkout and make a payment for my product(s)
+2. As a registered user I want my checkout delivery details to be saved to my profile
 
+**Profile**
+1. As a registered user I want information from my order to be saved and viewable
+2. As a registered user I want to be able to update my delivery information
 
-* Want to be able to update personal information on the user profile page
-* Want updated personal information to be reflected in the checkout page
-* Want to be able to update quantity/remove products from shopping cart
-* Want the secure checkout button on the shopping cart to direct to a checkout page
-* Want the checkout page to give a clear form to fill in before making a purchase
-* Want a clear confirmation that the order has been received upon completing an order
+**Pagination**
+1. As a visitor I would like to be able to view content split into separate pages to reduce loading times
 
-As a site owner I:
+**Frame Preview**
+1. As a visitor I would like to be able to preview what a product looks like with various frame colours
 
-* Want to be able to add products to the site from within the Account button
-* Want to be able to edit/delete products from either the main products page or from individual products details pages
-* Want to be able to add blog posts to the site from within the Account button
-* Want to be able to edit/delete blog posts from either the main blog page or from individual blog posts
+**Content Management**
+1. As an admin I want to be able to add product content within the site
+2. As an admin I want to be able to edit and delete product content within the site
+3. As an admin I want to be able to add blog content within the site
+4. As an admin I want to be able to edit and delete blog content within the site
 
-
-## Colour Scheme
+### Colour Scheme
 
 I approched this project with a simple minimalist colour scheme in mind, as the main focus is presenting photos that stand out for customers to purchase. The Navbar is a simple off white (#f8f9fa) background with black text and font awesome icons to stand out clearly. The shopping cart icon and product cost are highlighted in a light shade of blue (#17a2b8) to stand out both from the Navbar background and the background colour of the content.
 
@@ -108,46 +113,28 @@ I decided to use handrawn wireframes for this project, as there are a lot of fea
 
 ## Features
 
-The 'CRUD' operations are featured throughout the website as it is possible for Superusers to create, read, update and delete product and blog data. The app also uses Django's register/login/logout feature for ease of use in creating new profiles.
-
-
 ### Existing Features:
 
-* **Navbar** - On all devices the navbar has a brand logo in the top left hand corner which takes the user to the home page. The navigational links are contained within a burger menu on tablet and mobile devices in the top right hand corner. Rather than these links dropping down in a vertial list as is the norm, on tablet the 6 navigational links are displayed in a row, and on mobile they are displayed as two rows of three as this looks clear and appealing for the user. There is a search bar which is used to search for names or descriptions of products in the Gallery page. This search bar is displayed next to the brand logo on desktop, and on tablet and mobile is displayed central and below the brand logo and burger menu. There is also a link to the user's cart, which is presented with a cart logo and a number demonstrating the current value added to the cart, starting at £0.00.
--- The Account button in the navbar will display differently depending on the user's log in status. If a user is not logged in the Account button will drop down to provide the user the option to regiser or log in. If a user is logged in, the Account button will change from 'Account' to the user's username. The button will also dropdown with an option to view their profile or log out. If a Superuser is logged in, the Account dropdown will also include Product Management and Blog management, in which new products or blog posts can be added to the site.
+* Blog - Allow visitors to see more information posted by the site admin about the products or the photographer
+* Responsive layout - Allows visitors to visit the site on any device and resize their browser without losing content
+* Search - Allows visitors to quickly navigate to products quickly by searching key words
+* Gallery - Allows visitors to view and narrow down images by selecting filters
+* Contact - Allows visitors to contact the site owner by filling out a form 
+* Account/ Authentication - Allows visitors more interaction with the website by registering / logging in to become registerd users
+* Shopping - Allows registered users to buy their favourite prints
+* Shopping Cart - Allows registered users to add and remove products before buying
+* Messages - Allows the visitor to receive relevant feedback on actions taken by posting a message in the top right corner of the screen
+* Pagination - Allows pages to load faster where there is a large amount of content and reduces unnneccessary data transfer
+* Content management - Allows admins to update content & products on the site
+* Frame preview - Allows visitors to preview a selected print in a variety of frame colours before purchasing
+* Checkout - Allows users to checkout and make a secure payment for their product(s)
 
-* **Messages** - When a user makes various actions, or actions fail to execute, a message appears at the top right corner of the screen.
+### Future Features:
 
-* **Register** - When a user clicks the Account dropdown and selects register, they are presented with a form to fill out. They have to fill in their email address two separate times, ensuring they match, a username, and a password twice, again ensuring they match.
-
-* **Log in** - When the user clicks the Account dropdown and selects log in, they have to fill in a form with a recognised username and associated password.
-
-* **Log out** - When a user is already logged in and clicks the Account dropdown link, they can click sign out, and then have to confirm this action on a new page.
-
-* **Blog Comments** - On each individual blog post, provided a user is logged in they are able to add a comment. Clicking the add comment button takes them to a form on a separate page, and then after filling in a comment and submitting it they are redirected to the post with the comment below. 
--- If a user is not logged in and tries to add a comment they are directed to the log in page, as a user needs to be logged in for this feature. Once a user has added a comment, their comment will be displayed with an option to delete the comment. This only appears next to comments created by that user.
-
-* **Blog Likes** - On each individual blog post, provided a user is logged in they are able to like it by clicking the like button. This will change the blue 'like' button to a red 'unlike' button if they wish to reverse this decision. Each additional like is displayed as a total number of likes next to the like button.
--- If a user is not logged in and tries to add a like they are directed to the log in page, as a user needs to be logged in for this feature.
-
-* **Pagination** - The Blogs page uses a pagination feature, only displaying 4 blog posts on a single page. If there are additional blog posts a next button is available to click. After clicking the next button, there is then an option to click previous to return to the previous page, or next again if there are additional pages. In the middle of the next and previous buttons is a box highlighting how many pages there are in total and what page number the user is on.
-
-* **Superuser** - If a user is logged in as a Superuser they will have a different display to regular users. On the Account button they have access to the Product and Blog Management pages. They also have access to the CRUD operations on the home, blog, blog details, gallery and gallery details pages to update and delete blog posts or products from the store.
-
-* **Contact**  - The contact page has a simple contact form, the user is required to fill in each field. Once submitted the user is redirected to the home page, a confirmation message appears in the top corner of the screen. This message is then saved in the admin panel.
-
-* **Gallery**: - All Products - On the gallery page there is a All Products dropdown link which gives the user to filter the total number of products by price/rating or category
-            - On the gallery page there is a link for each category which once selected displays products solely from the category selected.
-
-* **Frame Colour** - A simple frame colour selector on the product details page allows the user to see what the selected photo product would look like with different coloured frames
-
-* **Home Page** - The home page presents the top 3 rated products in the store. They change based on product ratings.
-
-### Additional features to be implemented:
-
-* I would like to enable the search bar in the navbar to search for data in the blog page as well as the products page
-* I would like to add pagination to the gallery page, so that users only view a smaller number of products on each page on mobile but can view more on tablet and desktop
-* I would like to add JavaScript to the home page products to make them more dynamic and appealing upon visiting the website
+* Enhanced search - Allow visitors to search for key words in blog posts in addition to products
+* Gallery pagination - Add pagination to the gallery
+* Enhanced pagination - Visitors on mobile devices load less products on each page when not on WiFi so as to reduce data usage.
+* Animations - Add animation to the home page to make products look more dynamic and appealing upon visiting the website
 
 ## Technologies Used
 
@@ -190,11 +177,373 @@ The 'CRUD' operations are featured throughout the website as it is possible for 
 
 All of the testing for this project was done manually, however online validators were used to check the code used. These will be detailed below under the Code Validation heading. Testing always focussed on ensuring that the User Stories were being adhered to, that the website is responsive across all desktop, tablet and mobile devices and that the develoment was following the guidance of the wireframes where appropriate.
 
-* Navbar - Each link from the navbar has been tested extensively across all devices to ensure each page loads regardless of which page it is being directed from. This has been done as a superuser, logged in user and a user who is not signed in.
+**Blog**:
 
-* Search Bar - The search bar is situated next to the brand logo on desktop devices, and on tablet and mobile it is central on a row beneath the brand logo and the burger menu dropdown icon. The search bar is used to find any associated words on the Gallery page for product name or product descriptions. This feature works correctly.
+*As a visitor I want to be able to view an overview of the latest blog posts*
 
-* Product / Blog Management - When a Superuser is logged in, the Account dropdown link allows the user to add a Product or Blog to the site. This has been tested and confirmed that each field of the form functions correctly.
+- Pre-requisites:
+-- Visitor is on desktop and on the homepage
+- Steps:
+-- 1. Click blog button in navigation bar
+
+Expectation :
+- Blogs page loads
+- The last four blog posts displayed
+- Page is set to 1 of x
+- Each post has the title and date visible
+
+
+*As a visitor I want to be able to view a single, full blog post*
+
+- Pre-requisites:
+-- Visitor is on desktop and on the blog page
+- Steps:
+-- 1. Click a blog’s title
+
+Expectation:
+- Blog’s content is visible
+- Number of likes is displayed and accurate
+- Comments are displayed and accurate
+
+*As a registered user, I want to be able to comment on a single blog post*
+
+- Pre-requisites:
+-User is logged in on desktop and on the blog page
+- Steps:
+-- 1. Click a blog’s title 
+--  -- See single blog post
+-- 2. Click Add Comment link
+--  -- See comment form displayed
+-- 3. Fill in add comment form
+-- 4. Click submit button
+
+Expectation:
+- Redirected to single blog post
+- Comment is displayed under blog post
+
+*As a registered user, I want to be able to add a like to a single blog post*
+
+- Pre-requisites:
+-- User is logged in on desktop and on the blog page
+
+- Steps:
+-- 1. Click a blog’s title
+--  -- See single blog post
+--  -- Like button is colour blue as user not clicked 
+-- 2. Click Like button
+
+Expectation:
+- Like button changes to a red Unlike button
+- Number of likes increases by 1
+
+**Search**:
+
+*As a visitor I want to be able to find products within the site based on typing in keywords into the search bar* 
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+Steps:
+    1. Type search request into the search bar
+
+Expectations:
+
+- Loads any relavent products on the Gallery page
+- If the search bar input does not match any product name or description, it loads the Gallery page stating "0 Products found for 'x'"
+
+**Gallery**:
+
+*As a visitor I want to be able to view an overview of the products available* 
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click Gallery button in navigation bar
+
+Expectation:
+- Gallery page loads
+- All Products are displayed
+- Each Product has an image and related information visible
+
+*As a visitor I want to be able to filter the products displayed*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Gallery page
+- Steps:
+    1. Click on All Products dropdown link
+    2. Click on individual Category links
+
+Expectation:
+- All Products are filtered by visitor selection
+- All Products within Category selection are displayed
+
+*As a visitor I want to be able to view individual product details*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Gallery page
+- Steps:
+    1. Click on Product image
+
+Expectation:
+- Product image and details are visible
+
+*As a registered user, I want to be able to add a product into the shopping cart*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on a Product details page
+- Steps:
+    1. Select size from dropdown
+    2. Select quantity
+    3. Click Add to Bag button
+
+Expectation:
+- View success message confirming the size and quantity of the selected Product have been added to the shopping cart
+
+**Contact**:
+
+*As a visitor I want to be able to submit a message to the site admin*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on Contact button in navigation bar
+    2. Fill in contact form
+    3. Click send message button
+
+Expectation:
+- Receive confirmation that the message has been received
+
+*As an admin I want to be able to view messages submitted by visitors and users*
+
+- Pre-requisites:
+--  -- Admin is on desktop and on the home page
+- Steps:
+    1. Change the end of the homepage URL to /admin
+    2. Click the Contact model
+
+Expectation:
+- All submitted contacts are displayed
+
+**Account / Authentication**:
+
+*As a visitor I want to be able to register for an account*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on My Account button in the navigation bar
+    2. Select Register from the dropdown
+--  -- See a Sign Up form
+    3. Fill in sign up form
+    4. Click Sign Up button
+    5. Click link sent to email to confirm registration
+    6. Click the Confirm button
+
+Expectation:
+- Receive confirmation email after registering account
+- Receive confirmation message after confirming email address
+
+*As a registered user I want to be able to login to my account*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on My Account button in the navigation bar
+    2. Select Log In from the dropdown
+--  -- See a Sign in form
+    3. Fill in sign in form
+
+Expectation:
+- Choose between Username or email for first box and password in the next to log in
+- Receive confirmation message confirming log in success
+
+*As a registered user I want to be able to log out of my account*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on My Account button (now replaced with your username) in the navigation bar
+    2. Select Log Out from the dropdown
+--  -- See a Sign Out confirmation button
+    3. Click Sign Out
+
+Expectation:
+- Receive a confirmation message confirming I have signed out
+
+**Shopping Bag**
+
+*As a registered user I want to be able to view my shopping bag*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on Shopping cart icon
+
+Expectation:
+- Shopping cart page loads
+- Product content, size, quantity and cost are displayed
+
+*As a registered user I want to be able to edit the items in my shopping bag*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Shopping Cart page
+- Steps:
+    1. Click on the + or - symbols to alter the quantity of the selected product in the shopping cart.
+--  -- This can also be achieved by typing a new number in the text box
+    2. Click the update button
+Expectation:
+- Receive a confirmation message that the shopping cart has been updated
+- Product quantity and subtotal change to reflect the update
+
+*As a registered user I want to be able to remove an item from my shopping bag*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Shopping Cart page
+- Steps:
+    1. Click the remove button
+Expectation:
+- Receive a confirmation message that the product has been removed
+- Be redirected to a shopping cart page confirming the cart is empty
+
+**Checkout**:
+
+*As a user I want to be able to securely checkout and make a payment for my product(s)*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Shopping Cart page
+- Steps:
+    1. Click on Secure Checkout button
+--  --  See a checkout form with order summary
+    2. Fill in personal details and payment information
+    3. Click Complete Order
+
+Expectation:
+- Receive confirmation message of successful purchase and redirected to an order summary
+- Receive a confirmation email of successful purchase
+- Data from order to be saved onto a Profile page
+
+*As a registered user I want my checkout details to be saved to my profile*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Checkout page
+- Steps:
+    1. Click the 'save this delivery information to my profile' button after filling in delivery form
+    2. Click Complete Order
+
+Expectation:
+- Details from delivery section on checkout form to be saved onto a Profile page
+
+
+**Profile**:
+
+*As a registered user I want information from my order to be saved and viewable*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on the account button (the user's name) dropdown and select My Profile
+
+Expectation:
+- Details from registered user order will be displayed if the save details box was checked
+- Details from registered user's previous orders will be displayed
+
+*As a registered user I want to be able to update my delivery information*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the Profile page
+- Steps:
+    1. Fill in default delivery information form
+    2. Click update information button
+--  -- An update to delivery information can also be achieved by an additional order and checking the save delivery details box
+
+Expectation:
+- A message confirming that the Profile has been updated successfully
+- Updated information to be displayed on Checkout form
+
+**Pagination**:
+
+*As a visitor I would like to be able to view content split into separate pages to reduce loading times*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the homepage
+- Steps:
+    1. Click on Blog button in the navigation bar
+    2. Blog page loads, with pagination feature stating what page I am on out of how many
+    3. Click Next
+
+Expectation:
+- Next page of blog posts loads
+- Pagination feature displays the new page number I am on out of how many
+- Option to click Previous
+- Option to click Next again if there is another page of content
+
+**Frame Preview**:
+
+*As a visitor I would like to be able to preview what a product looks like with various frame colours*
+
+- Pre-requisites:
+--  -- Visitor is on desktop and on the product details page
+- Steps:
+    1. Click on any of the coloured circular buttons
+
+Expectation:
+- Border colour of image to change based on the visitor selection
+
+**Content Management**:
+
+*As an admin I want to be able to add product content within the site*
+
+- Pre-requisites:
+--  -- Admin is on desktop and on the homepage
+- Steps:
+    1. Click on Account button (the admin username) from the navigation bar and click Add Product from dropdown
+  --  -- See an add product form
+    2. Fill in add product form
+    3. Click Add Product button
+
+Expectation:
+- A message confirming the product has been succesfully added
+- A redirect to the newly added page
+
+*As an admin I want to be able to edit and delete product content within the site*
+
+- Pre-requisites:
+--  -- Admin is on desktop and on the homepage. This step can be performed on the homepage, Gallery page or product details page
+- Steps:
+    1. Click on edit button
+--  -- See an edit product form with boxes filled with current information
+    2. Make necessary changes to product
+    3. Click Update Product button
+Expectation:
+- A message confirming I am editing a product after clicking edit
+- A message confirming I have successfully updated the product
+
+*As an admin I want to be able to add blog content within the site*
+
+- Pre-requisites:
+--  -- Admin is on desktop and on the homepage
+- Steps:
+    1. Click on Account button (the admin username) from the navigation bar and click Add Blog from dropdown
+  --  -- See an add blog form
+    2. Fill in add blog form
+    3. Click Add Blog button
+
+Expectation:
+- A message confirming the blog has been succesfully added
+- A redirect to the Blogs page
+
+*As an admin I want to be able to edit and delete blog content within the site*
+
+- Pre-requisites:
+--  -- Admin is on desktop and on the Blog page
+- Steps:
+    1. Click on edit button
+--  -- See an edit product form with boxes filled with current information
+    2. Make necessary changes to product
+    3. Click Update Product button
+Expectation:
+- A message confirming I am editing a blog after clicking edit
+- A message confirming I have successfully updated the blog
+
 
 ## Code Validation
 
@@ -228,7 +577,7 @@ In order for this project to be run locally, the user would require an IDE such 
 
 Once you have met the above criteria you would be ready to clone this project to run locally. 
 
-* At the top of the page clicking the green 'Clone or Download' gives you two otions to clone this GitHub repository. You can download the file as a zip-file and upload it into your new workspace, please ensure that you unzip the file first. Or alternatively you can copy the repository web URL, open the Git CLI terminal and type: git clone https://github.com/JonWil91/Milestone-4.git.
+* At the top of the page (as it is currently laid out) clicking the green 'Clone or Download' gives you two otions to clone this GitHub repository. You can download the file as a zip-file and upload it into your new workspace, please ensure that you unzip the file first. Or alternatively you can copy the repository web URL, open the Git CLI terminal and type: git clone https://github.com/JonWil91/Milestone-4.git.
 * Ensure you have navigated to the correct file location using the 'cd' command
 * The next step would be to create a file named 'env.py', this will be an important file for safely storying your credentials. 
 * The next required step would be ensuring you have an up to date requirements.txt file. This can be initialised by typing 'sudo -H pip3 -r requirements.txt' into the terminal, the syntax may differ slightly between IDE's as for use in GitPod the 'sudo' element was not required.
