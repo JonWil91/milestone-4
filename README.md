@@ -57,9 +57,10 @@ User types woud be split into the following categories:
 
 **Gallery**
 1. As a visitor I want to be able to view an overview of the products available
-2. As a visitor I want to be able to filter the products displayed
-3. As a visitor I want to be able to view individual product details
-4. As a registered user, I want to be able to add a product into the shopping cart
+2. As a visitor I want to be able to filter the total products displayed
+3. As a visitor I want to be able to filter products by geographic category
+4. As a visitor I want to be able to view individual product details
+5. As a registered user, I want to be able to add a product into the shopping cart
 
 **Contact**
 1. As a visitor I want to be able to submit a message to the site admin
@@ -81,7 +82,8 @@ User types woud be split into the following categories:
 
 **Profile**
 1. As a registered user I want information from my order to be saved and viewable
-2. As a registered user I want to be able to update my delivery information
+2. As a registered user I want to be able to update my delivery information on my Profile page
+3. As a registered user I want to be able to update my delivery information on the Checkout page
 
 **Pagination**
 1. As a visitor I would like to be able to view content split into separate pages to reduce loading times
@@ -91,9 +93,11 @@ User types woud be split into the following categories:
 
 **Content Management**
 1. As an admin I want to be able to add product content within the site
-2. As an admin I want to be able to edit and delete product content within the site
-3. As an admin I want to be able to add blog content within the site
-4. As an admin I want to be able to edit and delete blog content within the site
+2. As an admin I want to be able to edit product content within the site
+3. As an admin I want to be able to delete product content within the site
+4. As an admin I want to be able to add blog content within the site
+5. As an admin I want to be able to edit blog content within the site
+6. As an admin I want to be able to delete blog content within the site
 
 ### Colour Scheme
 
@@ -173,376 +177,566 @@ I decided to use handrawn wireframes for this project, as there are a lot of fea
 * [AWS - S3](https://aws.amazon.com/s3/)
     - The project uses **AWS S3** as an object storage service for static files and media files
 
-## Testing
+<!-- Copy and paste the converted output. -->
 
-All of the testing for this project was done manually, however online validators were used to check the code used. These will be detailed below under the Code Validation heading. Testing always focussed on ensuring that the User Stories were being adhered to, that the website is responsive across all desktop, tablet and mobile devices and that the develoment was following the guidance of the wireframes where appropriate.
 
-**Blog**:
 
-*As a visitor I want to be able to view an overview of the latest blog posts*
+## **Testing**
 
-- Pre-requisites:
--- Visitor is on desktop and on the homepage
-- Steps:
--- 1. Click blog button in navigation bar
+The majority of testing for this project was done manually, however online validators were used to check the code. These will be detailed below under the Code Validation heading. Testing focused on ensuring that the User Stories are being adhered to, that the website is responsive across all desktop, tablet and mobile devices and that the development is following the guidance of the wireframes where appropriate. 
+
+Testing scripts have been written to test all user stories and ensure they work as intended. The attached test scripts are based on testing on a desktop as the steps sometimes vary for tablet & mobile.
+
+
+Blog:
+
+_As a visitor I want to be able to view an overview of the latest blog posts_
+
+
+
+*   Pre-requisites: \
+– Visitor is on desktop and on the homepage
+*   Steps: \
+– 1. Click blog button in navigation bar
 
 Expectation :
-- Blogs page loads
-- The last four blog posts displayed
-- Page is set to 1 of x
-- Each post has the title and date visible
 
 
-*As a visitor I want to be able to view a single, full blog post*
 
-- Pre-requisites:
--- Visitor is on desktop and on the blog page
-- Steps:
--- 1. Click a blog’s title
+*   Blogs page loads
+*   The last four blog posts displayed
+*   Page is set to 1 of x
+*   Each post has the title and date visible
 
-Expectation:
-- Blog’s content is visible
-- Number of likes is displayed and accurate
-- Comments are displayed and accurate
+_As a visitor I want to be able to view a single, full blog post_
 
-*As a registered user, I want to be able to comment on a single blog post*
 
-- Pre-requisites:
--User is logged in on desktop and on the blog page
-- Steps:
--- 1. Click a blog’s title 
---  -- See single blog post
--- 2. Click Add Comment link
---  -- See comment form displayed
--- 3. Fill in add comment form
--- 4. Click submit button
+
+*   Pre-requisites: \
+– Visitor is on desktop and on the blog page
+*   Steps: \
+– 1. Click a blog’s title
 
 Expectation:
-- Redirected to single blog post
-- Comment is displayed under blog post
 
-*As a registered user, I want to be able to add a like to a single blog post*
 
-- Pre-requisites:
--- User is logged in on desktop and on the blog page
 
-- Steps:
--- 1. Click a blog’s title
---  -- See single blog post
---  -- Like button is colour blue as user not clicked 
--- 2. Click Like button
+*   Blog’s content is visible
+*   Number of likes is displayed and accurate
+*   Comments are displayed and accurate
+
+_As a registered user, I want to be able to comment on a single blog post_
+
+
+
+*   Pre-requisites: \
+- registered User is logged in on desktop and on the blog page
+*   Steps: \
+– 1. Click a blog’s title \
+– – See single blog post \
+– 2. Click Add Comment link \
+– – See comment form displayed \
+– 3. Fill in add comment form \
+– 4. Click submit button
 
 Expectation:
-- Like button changes to a red Unlike button
-- Number of likes increases by 1
 
-**Search**:
 
-*As a visitor I want to be able to find products within the site based on typing in keywords into the search bar* 
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
+*   Redirected to single blog post
+*   Comment is displayed under blog post
+*   Receive message confirmation of successfully added comment
+
+_As a registered user, I want to be able to add a like to a single blog post_
+
+
+
+*   Pre-requisites: \
+– registered User is logged in on desktop and on the blog page
+*   Steps: \
+– 1. Click a blog’s title \
+– – See single blog post \
+– – Like button is colour blue as user not clicked \
+– 2. Click Like button
+
+Expectation:
+
+
+
+*   Like button changes to a red Unlike button
+*   Number of likes increases by 1
+
+Search:
+
+_As a visitor I want to be able to find products within the site based on typing in keywords into the search bar_
+
+
+
+*   Pre-requisites: \
+– – Visitor is on desktop and on the homepage \
 Steps:
     1. Type search request into the search bar
 
 Expectations:
 
-- Loads any relavent products on the Gallery page
-- If the search bar input does not match any product name or description, it loads the Gallery page stating "0 Products found for 'x'"
 
-**Gallery**:
 
-*As a visitor I want to be able to view an overview of the products available* 
+*   Loads relevant products on Gallery page
+*   If no match found, text on page states “0 Products found for ‘x’”
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
+Gallery:
+
+_As a visitor I want to be able to view an overview of the products available_
+
+
+
+*   Pre-requisites: \
+– – Visitor is on desktop and on the homepage
+*   Steps:
     1. Click Gallery button in navigation bar
 
 Expectation:
-- Gallery page loads
-- All Products are displayed
-- Each Product has an image and related information visible
 
-*As a visitor I want to be able to filter the products displayed*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the Gallery page
-- Steps:
+
+*   Gallery page loads
+*   All Products are displayed
+*   Each Product has an image and related information visible
+
+_As a visitor I want to be able to filter the total products displayed_
+
+
+
+*   Pre-requisites: -- -- Visitor is on desktop and on the Gallery page
+*   Steps:
     1. Click on All Products dropdown link
-    2. Click on individual Category links
+    2. Select filter option
 
 Expectation:
-- All Products are filtered by visitor selection
-- All Products within Category selection are displayed
 
-*As a visitor I want to be able to view individual product details*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the Gallery page
-- Steps:
+
+*   All Products filtered by visitor selection
+
+_As a visitor I want to be able to filter products by geographic category_
+
+
+
+*   Pre-requisites: -- -- Visitor is on desktop and on the Gallery page
+*   Steps:
+1. Click on preferred geographic filter option
+
+Expectation:
+
+
+
+*   All Products within geographic Category selection displayed
+
+_As a visitor I want to be able to view individual product details_
+
+
+
+*   Pre-requisites: \
+– – Visitor is on desktop and on the Gallery page
+*   Steps:
     1. Click on Product image
 
 Expectation:
-- Product image and details are visible
 
-*As a registered user, I want to be able to add a product into the shopping cart*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on a Product details page
-- Steps:
-    1. Select size from dropdown
-    2. Select quantity
-    3. Click Add to Bag button
 
-Expectation:
-- View success message confirming the size and quantity of the selected Product have been added to the shopping cart
+*   Product image and details are visible
 
-**Contact**:
+_As a registered user, I want to be able to add a product into the shopping bag_
 
-*As a visitor I want to be able to submit a message to the site admin*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
-    1. Click on Contact button in navigation bar
-    2. Fill in contact form
-    3. Click send message button
+
+*   Pre-requisites: \
+– – Registered user is on desktop, logged in and on Product details page
+*   Steps:
+    1. Select frame colour 
+    2. Select size from dropdown
+    3. Select quantity of product
+    4. Click Add to Bag button
 
 Expectation:
-- Receive confirmation that the message has been received
 
-*As an admin I want to be able to view messages submitted by visitors and users*
 
-- Pre-requisites:
---  -- Admin is on desktop and on the home page
-- Steps:
-    1. Change the end of the homepage URL to /admin
-    2. Click the Contact model
+
+*   View success message confirming the size and quantity of the selected Product added to the shopping bag
+
+Contact:
+
+_As a visitor I want to be able to submit a message to the site admin_
+
+
+
+*   Pre-requisites: \
+– – Visitor is on desktop and on the homepage
+*   Steps:
+    1. Click on Contact button in navigation bar \
+– – See a contact form
+    1. Fill in contact form
+    2. Click send message button
 
 Expectation:
-- All submitted contacts are displayed
 
-**Account / Authentication**:
 
-*As a visitor I want to be able to register for an account*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
+*   Receive confirmation that the message has been received
+*   Redirected to the homepage
+
+_As an admin I want to be able to view messages submitted by visitors and users_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, logged in and on the admin home page URL
+*   Steps:
+    1. Click the Contact model
+
+Expectation:
+
+
+
+*   All submitted messages are displayed
+
+Account / Authentication:
+
+_As a visitor I want to be able to register for an account_
+
+
+
+*   Pre-requisites: \
+– – Visitor is on desktop, on the homepage & does not have an account 
+*   Steps:
     1. Click on My Account button in the navigation bar
-    2. Select Register from the dropdown
---  -- See a Sign Up form
+    2. Select Register from the dropdown \
+– – See a Sign Up form
     3. Fill in sign up form
     4. Click Sign Up button
-    5. Click link sent to email to confirm registration
-    6. Click the Confirm button
+    5. Visitor directed to check email for link
+    6. Click link sent to email to confirm registration
+    7. – – See confirm registration page
+    8. Visitor to confirm email then Click Confirm button
 
 Expectation:
-- Receive confirmation email after registering account
-- Receive confirmation message after confirming email address
 
-*As a registered user I want to be able to login to my account*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
+
+*   Receive confirmation message that registration successful  
+
+_As a registered user I want to be able to login to my account_
+
+
+
+*   Pre-requisites: \
+– – registered user is on desktop,on the homepage and not logged in
+*   Steps:
     1. Click on My Account button in the navigation bar
-    2. Select Log In from the dropdown
---  -- See a Sign in form
-    3. Fill in sign in form
+    2. Select Log In from the dropdown \
+– – See a Sign in form
+    3. Complete sign in form
+    4. Click Sign In
 
 Expectation:
-- Choose between Username or email for first box and password in the next to log in
-- Receive confirmation message confirming log in success
 
-*As a registered user I want to be able to log out of my account*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
-    1. Click on My Account button (now replaced with your username) in the navigation bar
-    2. Select Log Out from the dropdown
---  -- See a Sign Out confirmation button
+
+*   Receive confirmation message confirming log in success
+*   A redirect to the homepage
+
+_As a registered user I want to be able to log out of my account_
+
+
+
+*   Pre-requisites: \
+– – Registered user is on desktop ,on the homepage and logged in
+*   Steps:
+    1. Click on username in the navigation bar
+    2. Select Sign Out from the dropdown \
+– – See a Sign Out confirmation button
     3. Click Sign Out
 
 Expectation:
-- Receive a confirmation message confirming I have signed out
 
-**Shopping Bag**
 
-*As a registered user I want to be able to view my shopping bag*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
-    1. Click on Shopping cart icon
+*   Receive a confirmation message confirming Sign Out successful 
+*   A redirect to the homepage 
 
-Expectation:
-- Shopping cart page loads
-- Product content, size, quantity and cost are displayed
+Shopping Bag
 
-*As a registered user I want to be able to edit the items in my shopping bag*
+_As a registered user I want to be able to view my shopping bag_
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the Shopping Cart page
-- Steps:
-    1. Click on the + or - symbols to alter the quantity of the selected product in the shopping cart.
---  -- This can also be achieved by typing a new number in the text box
-    2. Click the update button
-Expectation:
-- Receive a confirmation message that the shopping cart has been updated
-- Product quantity and subtotal change to reflect the update
 
-*As a registered user I want to be able to remove an item from my shopping bag*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the Shopping Cart page
-- Steps:
-    1. Click the remove button
-Expectation:
-- Receive a confirmation message that the product has been removed
-- Be redirected to a shopping cart page confirming the cart is empty
-
-**Checkout**:
-
-*As a user I want to be able to securely checkout and make a payment for my product(s)*
-
-- Pre-requisites:
---  -- Visitor is on desktop and on the Shopping Cart page
-- Steps:
-    1. Click on Secure Checkout button
---  --  See a checkout form with order summary
-    2. Fill in personal details and payment information
-    3. Click Complete Order
+*   Pre-requisites: \
+– – registered user is on desktop, logged in and on the homepage. Items are in the shopping bag. 
+*   Steps:
+    1. Click on Shopping bag icon
 
 Expectation:
-- Receive confirmation message of successful purchase and redirected to an order summary
-- Receive a confirmation email of successful purchase
-- Data from order to be saved onto a Profile page
 
-*As a registered user I want my checkout details to be saved to my profile*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the Checkout page
-- Steps:
-    1. Click the 'save this delivery information to my profile' button after filling in delivery form
-    2. Click Complete Order
+
+*   Shopping bag page loads
+*   Product content, size, quantity and cost are displayed
+
+_As a registered user I want to be able to edit the items in my shopping bag_
+
+
+
+*   Pre-requisites: \
+– – registered user is on desktop, logged in and on the Shopping bag page. Items are in the shopping bag.
+*   Steps:
+    1. Click on the + or - symbols to alter the quantity of selected product \
+– – This can also be achieved by typing a new number in the text box
+    2. Click the update button \
+Expectation:
+*   Receive a confirmation message that the shopping bag has been updated
+*   Product quantity and subtotal change to reflect the update
+
+_As a registered user I want to be able to remove an item from my shopping bag_
+
+
+
+*   Pre-requisites: \
+– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Steps:
+    1. Click remove button next to applicable product  \
+Expectation:
+*   Receive a confirmation message that the product has been removed
+*   Be redirected to a shopping bag page confirming the applicable product has been removed
+*   If shopping bag now empty page displays text stating shopping bag is empty
+
+Checkout:
+
+_As a user I want to be able to securely checkout and make a payment for my product(s)_
+
+
+
+*   Pre-requisites: \
+– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Steps:
+    2. Click on Secure Checkout button \
+– – See a checkout form with order summary
+    3. Fill in personal details and payment information
+    4. Click Complete Order
 
 Expectation:
-- Details from delivery section on checkout form to be saved onto a Profile page
 
 
-**Profile**:
 
-*As a registered user I want information from my order to be saved and viewable*
+*   Receive confirmation message of successful purchase 
+*   redirected to an order summary
+*   Receive a confirmation email of successful purchase
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
-    1. Click on the account button (the user's name) dropdown and select My Profile
+_As a registered user I want my checkout details to be saved to my profile_
+
+
+
+*   Pre-requisites: \
+– – registered user is on desktop, logged in and on the Checkout page with items in shopping bag.
+*   Steps:
+    1. Complete delivery form 
+    2. Click ‘save this delivery information to my profile’ button
+    3. 3. Click Complete Order
 
 Expectation:
-- Details from registered user order will be displayed if the save details box was checked
-- Details from registered user's previous orders will be displayed
 
-*As a registered user I want to be able to update my delivery information*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the Profile page
-- Steps:
+
+*   Details from delivery section on checkout form to be saved in Profile page
+
+Profile:
+
+_As a registered user I want information from my order to be saved and viewable_
+
+
+
+*   Pre-requisites: \
+– – registered user is on desktop, logged in and on the homepage. User has ‘save delivery information to profile’ selected on checkouts. 
+*   Steps:
+    1. Click on user name in navigation bar
+    2. Select ‘My Profile’ from dropdown list 
+
+Expectation:
+
+
+
+*   Details from current order will be displayed 
+*   Details from previous orders will be displayed
+
+_As a registered user I want to be able to update my delivery information on my Profile page_
+
+
+
+*   Pre-requisites: \
+– – Registered user is on desktop, logged in and on the Profile page
+*   Steps:
     1. Fill in default delivery information form
-    2. Click update information button
---  -- An update to delivery information can also be achieved by an additional order and checking the save delivery details box
+    2. Click Update Information button
 
 Expectation:
-- A message confirming that the Profile has been updated successfully
-- Updated information to be displayed on Checkout form
 
-**Pagination**:
 
-*As a visitor I would like to be able to view content split into separate pages to reduce loading times*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the homepage
-- Steps:
+*   A message confirming that the Profile has been updated successfully
+
+_As a registered user I want to be able to update my delivery information on the Checkout page_
+
+
+
+*   Pre-requisites: \
+– – registered User is on desktop, logged in and on the Checkout page with items in shopping bag.
+*   Steps:
+    3. Update existing delivery info
+    4. Click ‘save this delivery information to my profile’ button
+    5. Click Complete Order
+
+Expectation:
+
+
+
+*   Updated details from delivery section on checkout form to be saved in Profile page
+
+Pagination:
+
+_As a visitor I would like to be able to view blog content split into separate pages to reduce loading times_
+
+
+
+*   Pre-requisites: \
+– – Visitor is on desktop and on the homepage
+*   Steps:
     1. Click on Blog button in the navigation bar
-    2. Blog page loads, with pagination feature stating what page I am on out of how many
+    2. Blog page loads, with pagination feature stating what number page visitor is on and total number of pages available 
     3. Click Next
 
 Expectation:
-- Next page of blog posts loads
-- Pagination feature displays the new page number I am on out of how many
-- Option to click Previous
-- Option to click Next again if there is another page of content
 
-**Frame Preview**:
 
-*As a visitor I would like to be able to preview what a product looks like with various frame colours*
 
-- Pre-requisites:
---  -- Visitor is on desktop and on the product details page
-- Steps:
-    1. Click on any of the coloured circular buttons
+*   Next page of blog posts loads
+*   Pagination feature displays the new page number visitor is on out of total available 
+*   Option to click Previous to return to previous page
+*   Option to click Next again if there is another page of content
 
-Expectation:
-- Border colour of image to change based on the visitor selection
+Frame Preview:
 
-**Content Management**:
+_As a visitor I would like to be able to preview what a product looks like with various frame colours_
 
-*As an admin I want to be able to add product content within the site*
 
-- Pre-requisites:
---  -- Admin is on desktop and on the homepage
-- Steps:
-    1. Click on Account button (the admin username) from the navigation bar and click Add Product from dropdown
-  --  -- See an add product form
-    2. Fill in add product form
-    3. Click Add Product button
+
+*   Pre-requisites: \
+– – Visitor is on desktop and on the product details page
+*   Steps:
+    1. Click on any of the coloured circular buttons under Frame Colour
 
 Expectation:
-- A message confirming the product has been succesfully added
-- A redirect to the newly added page
 
-*As an admin I want to be able to edit and delete product content within the site*
 
-- Pre-requisites:
---  -- Admin is on desktop and on the homepage. This step can be performed on the homepage, Gallery page or product details page
-- Steps:
-    1. Click on edit button
---  -- See an edit product form with boxes filled with current information
+
+*   Border colour of image to change based on the visitor selection
+
+Content Management:
+
+_As an admin I want to be able to add product content within the site_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, on the homepage and logged in
+*   Steps:
+    1. Click on admin username from the navigation bar 
+    2. Click Add Product from dropdown \
+– – See an add product form
+    3. Fill in add product form
+    4. Click Add Product button
+
+Expectation:
+
+
+
+*   A message confirming the product has been successfully added
+*   A redirect to the newly added page
+
+_As an admin I want to be able to edit product content within the site_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop and logged in. This script works on homepage, Gallery page and product details page
+*   Steps:
+    1. Click on edit button \
+– – See edit product form with current information included \
+– – See alert message warning edit status is live
     2. Make necessary changes to product
-    3. Click Update Product button
+    3. Click Update Product button \
 Expectation:
-- A message confirming I am editing a product after clicking edit
-- A message confirming I have successfully updated the product
+*   Confirmation message stating product successfully updated 
+*   A redirect to the updated product
 
-*As an admin I want to be able to add blog content within the site*
+_As an admin I want to be able to delete product content within the site_
 
-- Pre-requisites:
---  -- Admin is on desktop and on the homepage
-- Steps:
-    1. Click on Account button (the admin username) from the navigation bar and click Add Blog from dropdown
-  --  -- See an add blog form
-    2. Fill in add blog form
-    3. Click Add Blog button
+
+
+*   Pre-requisites: \
+– – Admin is on desktop and logged in. This script works on homepage, Gallery page and product details page
+*   Steps:
+    4. Click on delete button \
+Expectation:
+*   Confirmation message stating product successfully deleted
+*   A redirect to Gallery page
+
+_As an admin I want to be able to add blog content within the site_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, logged in and on the homepage
+*   Steps:
+    1. Click on admin username from the navigation bar 
+    2. Click Add Blog from dropdown \
+– – See an add blog form
+    3. Fill in add blog form
+    4. Click Add Blog button
 
 Expectation:
-- A message confirming the blog has been succesfully added
-- A redirect to the Blogs page
 
-*As an admin I want to be able to edit and delete blog content within the site*
 
-- Pre-requisites:
---  -- Admin is on desktop and on the Blog page
-- Steps:
-    1. Click on edit button
---  -- See an edit product form with boxes filled with current information
-    2. Make necessary changes to product
-    3. Click Update Product button
+
+*   A message confirming the blog has been successfully added
+*   A redirect to the newly added blog page
+
+_As an admin I want to be able to edit blog content within the site_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, logged in and on the Blog page. This script works on the Blog page and individual blog posts.
+*   Steps:
+    1. Click on edit button \
+– – See edit blog form with current information included \
+– – See alert message warning edit status is live
+    2. Make necessary changes to blog
+    3. Click Update Blog button \
 Expectation:
-- A message confirming I am editing a blog after clicking edit
-- A message confirming I have successfully updated the blog
+*   Confirmation message stating blog successfully updated
+*   A redirect to the updated blog post
+
+_As an admin I want to be able to delete blog content within the site_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, logged in and on the Blog page. This script works on the Blog page and individual blog posts.
+*   Steps:
+    5. Click on delete button \
+Expectation:
+*   Confirmation message stating blog successfully deleted
+*   A redirect to the Blogs page
 
 
 ## Code Validation
