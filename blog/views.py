@@ -41,7 +41,7 @@ def add_blog(request):
         if blog.is_valid():
             blog = blog.save()
             messages.success(request, 'Successfully added blog!')
-            return redirect(reverse('all_blogs'))
+            return redirect(reverse('blog_detail', args=[blog.id]))
         else:
             messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
     else:

@@ -21,11 +21,11 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     location = models.CharField(max_length=254, null=True, blank=True)
     location_link = models.CharField(max_length=254, null=True, blank=True)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=True, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    description = models.TextField(null=False, blank=False)
+    has_sizes = models.BooleanField(default=True, null=False, blank=False)
+    price = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
+    image = models.ImageField(null=False, blank=False)
 
     def __str__(self):
         return self.name

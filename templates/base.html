@@ -82,17 +82,17 @@
                                     <a href="{% url 'add_blog' %}" class="dropdown-item">Add Blog</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
                             {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-cart"></i></div>
+                                <div><i class="fas fa-shopping-bag"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                         £{{ grand_total|floatformat:2 }}
