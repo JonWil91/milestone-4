@@ -295,6 +295,10 @@ a {
     cursor: pointer;
 }
 
+.bag-btn {
+    cursor: pointer;
+}
+
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #dc3545;
