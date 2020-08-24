@@ -22,7 +22,6 @@ class Product(models.Model):
     location = models.CharField(max_length=254, null=True, blank=True)
     location_link = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField(null=False, blank=False)
-    has_sizes = models.BooleanField(default=True, null=False, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
     image = models.ImageField(null=False, blank=False)
