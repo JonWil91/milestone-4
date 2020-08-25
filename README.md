@@ -760,39 +760,72 @@ To ensure that the website is accessible and runs across different devices and b
 
 This project was developed using the GitPod IDE, committing to Git for every meaningful change and pushing commits to GitHub via the terminal Git commands. On GitHub I was able to view the Code Institute template reccomended for GitPod use, clone it, and then create my own repository with the template. After this it was possible to create a new workspace using GitPod.
 
-### Local Deployment
+### Deployment
 
-In order for this project to be run locally, the user would require an IDE such as GitPod and the following features to be installed:
+This project was developed using the GitPod IDE, committing to Git for every meaningful change and pushing commits to GitHub via the terminal Git commands. On GitHub I was able to view the Code Institute template reccomended for GitPod use, clone it, and then create my own repository with the template. After this, it was possible to create a new workspace using GitPod.
 
-* Python3
-* Django
-* PIP
-* Git would be required for version control throughout
+**Local Deployment**
 
-Once you have met the above criteria you would be ready to clone this project to run locally. 
 
-* At the top of the page (as it is currently laid out) clicking the green 'Clone or Download' gives you two otions to clone this GitHub repository. You can download the file as a zip-file and upload it into your new workspace, please ensure that you unzip the file first. Or alternatively you can copy the repository web URL, open the Git CLI terminal and type: git clone https://github.com/JonWil91/Milestone-4.git.
-* Ensure you have navigated to the correct file location using the 'cd' command
-* The next step would be to create a file named 'env.py', this will be an important file for safely storying your credentials. 
-* The next required step would be ensuring you have an up to date requirements.txt file. This can be initialised by typing 'sudo -H pip3 -r requirements.txt' into the terminal, the syntax may differ slightly between IDE's as for use in GitPod the 'sudo' element was not required.
-* Next you would be required to make migrations to the database. This would be done in two steps: python3 manage.py makemigrations, and then python3 manage.py migrate
-* After migrations are made you would need to load the data from the fixtures. This has to be done in this order: python3 manage.py loadata categories, python3 manage.py loadata products. An error will occur if you try and load products before categories.
 
-Once these steps have been completed you have everything ready to run the application. If you are using the GitPod IDE you would run the command python3 manage.py runserver which will initialise the app and give you the prompt to expose the local host you are running and open it on a browser.
+*   In the terminal enter `git clone [https://github.com/jonwil91/milestone-4](https://github.com/jonwil91/milestone-4)` to make a clone of this repository. Alternatively, by clicking the green 'Clone or Download' you can download the file as a zip-file and upload it into your new workspace, please ensure that you unzip the file first. 
+*   In the terminal enter `cd milestone-4` (path to folder)
+*   The next step would be to create a ‘.env’, this will be an important file for safely storing your credentials. These can also be stored as GitPod environment variables if used the GitPod IDE.
+*   In the terminal enter `pip3 install -r requirements.txt` to install necessary dependencies
+*   In the terminal enter `python3 manage.py migrate` to create the database schema
+    *   After this stage you ought to notice a db.sqlite3 database file has been created
+*   At this point if you enter `python3 manage.py runserver` you will be able to expose the app to port 8000. Products will not yet be displayed
+*   The next two inputs have to be entered in this order:
+    *   `python3 manage.py loaddata categories`
+    *   `python3 manage.py loaddata products`
+*   In the terminal enter `python3 manage.py createsuperuser` to create an admin account to access Django’s admin panel
+*   In the terminal, in the following order enter
+	*   `add .`, 
+	*    `git commit -m “[Message for commit]”`,
+	*    `git push`.
+	*    This will push and safely store all changes to GitHub
 
-### Remote Deployment
+At this point the local deployment is functional, bar the checkout feature using Stripe. To add this functionality, sign up for an account with [Stripe](www.stripe.com), collect the following variables to add to the ‘.env’ file
 
-This website has been deployed on Heroku using the master branch on GitHub. To host the project on Heroku the following steps were taken:
 
-1. Sign up and create a free Heroku account and create a new app for later deployment
-2. Create a requirements.txt file so that Heroku can install the necessary dependencies to run the app. In the CLI terminal type 'pip3 freeze --local > requirements.txt'
-3. Create a Procfile which will tell Heroku what type of application is being deployed and how to run it.
-4. In Heroku after creating the project app, click the 'Deploy' tab, choose GitHub as your deployment method and select Enable Automatic Deployment.
-5. Create an AWS account, set up an S3 bucket, create a user and policy to authorise
-6. Link the AWS account to Heroku and the IDE
-7. Select the Settings tab next and click the 'Reveal Config Vars' button. You will then need to input the all secret key data that you do not want to be caught in version control due to risk of users being able to cause malicious damage.
 
-Once these steps have been followed you will be ready to deploy your website to Heroku.
+    *   STRIPE_SECRET_KEY = Value
+    *   STRIPE_PUBLIC_KEY = Value
+    *   STRIPE_WH_KEY = Value
+
+Please note that for testing the checkout feature using Stripe, the test card number is: 4242 4242 4242 (the CVC and expiry date can be any number)
+
+**Remote Deployment**
+
+**The deployed site can be found at: https://jw-photography.herokuapp.com**
+
+
+
+*   Ensure that you have Procfile created to tell Heroku the type of application using gunicorn and how to run it
+*   Visit [Heroku]([www.heroku.com](www.heroku.com)), register and create a new app
+*   In the deploy tab set GitHub as deployment method and search for repository (will have to sign into GitHub if a new user)
+    *   Click enable automatic deploys to push to Heroku master when pushing to GitHub
+    *   In Resources tab, in search bar, look for Heroku Postgress and select Hobby Dev - Free - update to remote database
+*   In the terminal enter `heroku login -i` and enter your credentials
+*   In the terminal enter `heroku git:remote -a [name of Heroku app]`
+*   Initialise a new commit 
+	*   `git add .`,
+	*   `git commit -m “[git commit message]”`
+	*   `git push`
+*   Create an AWS account, set up an S3 bucket, create a user and policy to authorise
+*   Using an email provider such as Gmail, set up a profile to access  EMAIL_HOST_PASS and EMAIL_HOST_USER credentials
+*   In Heroku settings, click Reveal Config Vars and add the following:
+    *   AWS_ACCESS_KEY = Value
+    *   AWS_SECRET_ACCESS_KEY  = Value
+    *   DATABASE_URL = Value
+    *   EMAIL_HOST_PASS = Value
+    *   EMAIL_HOST_USER = Value
+    *   SECRET_KEY = Value
+    *   STRIPE_SECRET_KEY = Value
+    *   STRIPE_PUBLIC_KEY = Value
+    *   STRIPE_WH_KEY = Value
+    *   USE_AWS = True
+*   Add the above variable names to the settings.py file
 
 ## Credits 
 
