@@ -2,11 +2,12 @@ Full Stack Milestone Project 4 - Code Institute
 
 # JW Photography 
 
+
 This is my fourth Milestone project of the Full Stack Frameworks with Django module from Code Institute. This project was designed to demonstrate all the knowledge and skills I have developed throughout the Code Institute Fullstack Web Developer course. This project will pull together the HTMl, CSS, JavaScript and Python skills learnt in previous modules and add using Django 3 to develop an e-commerce website.
 
 ## Project Purpose
 
-The primary purpose of this project is to allow a user to navigate across the different pages within a visually appealing and user friendly website and purchase photo products. The products displayed on the site are photos I have taken in various countries whilst travelling and they provide a good range of photo types that would be able to appeal to a broad user base. This pulls together all skills that have been learnt throughout the Code Insitute course. The project is an e-commerce website that has the purpose of displaying products for the user to browse, add to a shopping cart and purchase. In addition to this were two custom models for the project which were used in the blog section where users can add comments to a blog and use the contact page to send a message to the Superuser admin panel.
+The primary purpose of this project is to allow a user to navigate across the different pages within a visually appealing and user friendly website and purchase photo products. The products displayed on the site are photos I have taken in various countries whilst travelling and they provide a good range of photo types that would be able to appeal to a broad user base. This pulls together all skills that have been learnt throughout the Code Institute course. The project is an e-commerce website that has the purpose of displaying products for the user to browse, add to a shopping cart and purchase. In addition to this were two custom models for the project which were used in the blog section where users can add comments to a blog and use the contact page to send a message to the Superuser admin panel.
 
 This website would provide value to a user as it provides a number of different style photos available to purchase and enjoy. There is also a blog section to learn a little bit more about the website owners and about certain photos.
 
@@ -22,7 +23,7 @@ This website would provide value to a user as it provides a number of different 
 * [**Technologies Used**](#technologies-used)
 * [**Testing**](#testing)
     - [**Code Validation**](#code-validation)
-    - [**Compatability**](#compatability)
+    - [**Compatibility**](#compatibility)
 * [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
     - [**Remote Deployment**](#remote-deployment)
@@ -33,16 +34,14 @@ This website would provide value to a user as it provides a number of different 
 
 ## UX
 
-It is made clear to the user that the site is an e-commerce site from the home page due to the clear title and supporting text above the three currently top rated products from the store. The user is able to view these products immidiately or visit the gallery page.
+It is made clear to the user that the site is an e-commerce site from the home page due to the clear title and supporting text above the three currently top rated products from the store. The user is able to view these products immediately or visit the gallery page.
 
-The user is able to peruse all available products in the gallery page, this could be achieved by viewing all products as initially displayed, filtering by price/rating/category, or selecting the specific category of interest. This allows the user to filter the products in a broad sense or to narrow down the field to a particular type of product. A user has the ability to register as a user, or login if a previous account has been created, and then add items to a bag and  proceed to checkout to make the purchase.
+The user is able to peruse all available products in the gallery page, this could be achieved by viewing all products as initially displayed, filtering by price/rating/category, or selecting the specific category of interest. This allows the user to filter the products in a broad sense or to narrow down the field to a particular type of product. A user has the ability to register as a user, or login if a previous account has been created, and then add items to a bag and proceed to checkout to make the purchase.
 
 User's also have the ability to use the contact page to send a message to the admin panel, or to view the blog page to read, comment and like various blog posts, as long as they are logged in.
 
-User types woud be split into the following categories:
-	- Visitor - Person on the website (not necessarily registered with an account)
-	- Registered User - Person on the website with an account
-    -Admin - Owner of the website (logged in)
+User types would be split into the following categories: - Visitor - Person on the website (not necessarily registered with an account) - Registered User - Person on the website with an account - Admin - Owner of the website (logged in)
+
 
 ### User stories:
 
@@ -101,7 +100,7 @@ User types woud be split into the following categories:
 
 ### Colour Scheme
 
-I approched this project with a simple minimalist colour scheme in mind, as the main focus is presenting photos that stand out for customers to purchase. The Navbar is a simple off white (#f8f9fa) background with black text and font awesome icons to stand out clearly. The shopping cart icon and product cost are highlighted in a light shade of blue (#17a2b8) to stand out both from the Navbar background and the background colour of the content.
+I approached this project with a simple minimalist colour scheme in mind, as the main focus is presenting photos that stand out for customers to purchase. The Navbar is a simple off white (#f8f9fa) background with black text and font awesome icons to stand out clearly. The shopping cart icon and product cost are highlighted in a light shade of blue (#17a2b8) to stand out both from the Navbar background and the background colour of the content.
 
 The body background colour throughout is a very light shade of blue (#c3d8e2) so as to not take focus from the products being sold, and so that all text and content is clear and easy to read.
 
@@ -111,9 +110,11 @@ The top row of the Footer uses the same grey colour as the Header to display the
 
 Throughout the site blue is used as a colour to signify an option to edit/update, whilst red is associated with removing or deleting content.
 
+
 ### Wireframes
 
-I decided to use handrawn wireframes for this project, as there are a lot of features on certain pages which would be easier to reflect by hand. For the most part the wireframes match up with the final product, with the exception of the introduction to pagination and an alteration to the product details pages, which were introduced during the production process.
+I decided to use hand drawn wireframes for this project. There were alterations from the wireframes in instances that improved user experience in ways that had not been anticipated at the start of development. Examples such as improving the Product Purpose on the homepage so that it was immediately clear to visitors that it was an e-commerce site for photo prints. Other alterations included the products detail page to use the space effectively and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices. 
+
 
 ## Features
 
@@ -121,24 +122,31 @@ I decided to use handrawn wireframes for this project, as there are a lot of fea
 
 * Blog - Allow visitors to see more information posted by the site admin about the products or the photographer
 * Responsive layout - Allows visitors to visit the site on any device and resize their browser without losing content
-* Search - Allows visitors to quickly navigate to products quickly by searching key words
+* Search - Allows visitors to quickly navigate to products quickly by searching keywords
 * Gallery - Allows visitors to view and narrow down images by selecting filters
 * Contact - Allows visitors to contact the site owner by filling out a form 
-* Account/ Authentication - Allows visitors more interaction with the website by registering / logging in to become registerd users
+* Account/ Authentication - Allows visitors more interaction with the website by registering / logging in to become registered users
 * Shopping - Allows registered users to buy their favourite prints
+* Payment - use the following Stripe test card details for test payments:
+	* Card Number - 4242 4242 4242 4242
+	* MM / YY - Any number
+	* CVC - Any number
+	* Zip Code - Any number
 * Shopping Cart - Allows registered users to add and remove products before buying
 * Messages - Allows the visitor to receive relevant feedback on actions taken by posting a message in the top right corner of the screen
-* Pagination - Allows pages to load faster where there is a large amount of content and reduces unnneccessary data transfer
+* Pagination - Allows pages to load faster where there is a large amount of content and reduces unnecessary data transfer
 * Content management - Allows admins to update content & products on the site
 * Frame preview - Allows visitors to preview a selected print in a variety of frame colours before purchasing
 * Checkout - Allows users to checkout and make a secure payment for their product(s)
 
 ### Future Features:
 
-* Enhanced search - Allow visitors to search for key words in blog posts in addition to products
+* Enhanced search - Allow visitors to search for keywords in blog posts in addition to products
 * Gallery pagination - Add pagination to the gallery
 * Enhanced pagination - Visitors on mobile devices load less products on each page when not on WiFi so as to reduce data usage.
 * Animations - Add animation to the home page to make products look more dynamic and appealing upon visiting the website
+* Add option for registered users to delete their account
+* Add load more button to profile page in case of high number of previous orders
 
 ## Technologies Used
 
@@ -177,8 +185,6 @@ I decided to use handrawn wireframes for this project, as there are a lot of fea
 * [AWS - S3](https://aws.amazon.com/s3/)
     - The project uses **AWS S3** as an object storage service for static files and media files
 
-<!-- Copy and paste the converted output. -->
-
 
 
 ## **Testing**
@@ -186,6 +192,8 @@ I decided to use handrawn wireframes for this project, as there are a lot of fea
 The majority of testing for this project was done manually, however online validators were used to check the code. These will be detailed below under the Code Validation heading. Testing focused on ensuring that the User Stories are being adhered to, that the website is responsive across all desktop, tablet and mobile devices and that the development is following the guidance of the wireframes where appropriate. 
 
 Testing scripts have been written to test all user stories and ensure they work as intended. The attached test scripts are based on testing on a desktop as the steps sometimes vary for tablet & mobile.
+
+# AUTOMATIC TESTING WAS DONE...
 
 
 Blog:
@@ -739,14 +747,62 @@ Expectation:
 *   A redirect to the Blogs page
 
 
-## Code Validation
+### Differences in content display across difference devices
+
+* Navigational bar:
+	* Desktop - Brand title, search box and navigational links all displayed in one row
+	* Tablet - Brand title top left corner, burger menu top right corner of one row and search box centre of next row. When burger menu is clicked the navigational links drop down to a row of six beneath the search box, centrally aligned
+	* Mobile - Brand title top left corner, burger menu top right corner of one row and search box centre of next row. When burger menu is clicked the navigational links drop down to two rows of three beneath the search box, centrally aligned
+* Home page:
+	* Desktop and Tablet - Products displayed horizontally in rows of three
+	* Mobile - Products displayed vertically one on top of another
+* Blogs:
+	* Desktop and Tablet - Blogs displayed horizontally in rows of two
+	* Mobile - Blogs displayed vertically one on top of another
+* Gallery:
+	* Desktop - Products displayed horizontolly in rows of four
+	* Tablet - Products displayed horizontolly in rows of two
+	* Mobile - Products displayed vertically one on top of another
+* Product Details:
+	* Desktop - Product image with location and location link displayed beneath on one half of screen with product details and interactive buttons on the other side
+	* Tablet and Mobile - Product image with location and location link displayed above product details and interactive buttons
+* Profile Page:
+	* Desktop - Default delivery information displayed in one half of screen with order history taking up the other half
+	* Tablet and Mobile - Default delivery information displayed above order history
+* Shopping Bag:
+	* Desktop and Tablet - Product image/name/size/cost/quantity and subtotal displayed in one row. Bag total, delivery costs and grand total displayed bottom right above buttons to keep shopping or checkout
+	* Mobile - Bag total, delivery costs, grand total cost, keep shopping and checkout buttons all displayed centrally on separate rows. Text stating summary of shopping bag contents below on next row and product image below. Below this, each on a separate row centrally aligned: product name, product size, subtotal, quantity and update/remove buttons. At the bottom of the page is an upwards arrow which takes the registered user to the stop of the screen.
+* Checkout:
+	* Desktop - Details, delivery information and payment form displayed on one half of the screen, with order summary on the other side
+	* Tablet and Mobile - Order summary, details, delivery information and payment form displayed one on top of another.
+* Order Information:
+	* Desktop and Tablet - Order info headings on one side of screen, with corresponding values on the other side in the corresponding rows
+	* Mobile - Order info display in one column, with values displayed directly beneath corresponding headings
+
+
+
+
+### Bugs highlighted by testing
+
+* Found that on the checkout page, the registered user's address was saved to the profile regardless of whether the checkbox was saved
+	* To be fixed for a future release
+* Found that the quantity selector on the bag page does not limit between 1 (min) and 99 (max) as the product details page does
+	* To be fixed for a future release
+* Found that the pluralize function was not working on the blog details page for like/likes. A simple fix of a typo in the template
+* Found that not all links has the CSS cursor added on, fixed as an oversight
+
+# FIX THIS
+* During development the category name for snow themed products was amended from *ski_hill* to *snow* to be more inclusive. Upon testing it was discovered that this change had been applied to the local deployment, but had broken the remote deployment product geographical filter link *snow*. 
+
+
+### Code Validation
 
 * I used the W3C HTML Validator tool to validate my HTML code. The W3C Validator tool doesn't recognise the Jinja templating, which resulted in it showing a lot of errors in relation to the Jinja code. This meant carefully going through such html files to ensure that they were formatted correctly.
 * I used the W3C CSS Validator tool to validate my CSS code.
 * I used the JSHint tool to validate my JavaScript syntax.
 * I used the Pep8 Online tool to validate my Python syntax. I had to update a number of lines that were too long and blank spaces I had initially missed.
 
-## Compatability
+## Compatibility
 
 To ensure that the website is accessible and runs across different devices and browsers, I have tested it on the following:
 
@@ -758,14 +814,9 @@ To ensure that the website is accessible and runs across different devices and b
 
 ## Deployment
 
-This project was developed using the GitPod IDE, committing to Git for every meaningful change and pushing commits to GitHub via the terminal Git commands. On GitHub I was able to view the Code Institute template reccomended for GitPod use, clone it, and then create my own repository with the template. After this it was possible to create a new workspace using GitPod.
+This project was developed using the GitPod IDE, committing to Git for every meaningful change and pushing commits to GitHub via the terminal Git commands. On GitHub I was able to view the Code Institute template recommended for GitPod use, clone it, and then create my own repository with the template. After this, it was possible to create a new workspace using GitPod.
 
-### Deployment
-
-This project was developed using the GitPod IDE, committing to Git for every meaningful change and pushing commits to GitHub via the terminal Git commands. On GitHub I was able to view the Code Institute template reccomended for GitPod use, clone it, and then create my own repository with the template. After this, it was possible to create a new workspace using GitPod.
-
-**Local Deployment**
-
+### Local Deployment
 
 
 *   In the terminal enter `git clone [https://github.com/jonwil91/milestone-4](https://github.com/jonwil91/milestone-4)` to make a clone of this repository. Alternatively, by clicking the green 'Clone or Download' you can download the file as a zip-file and upload it into your new workspace, please ensure that you unzip the file first. 
@@ -787,25 +838,22 @@ This project was developed using the GitPod IDE, committing to Git for every mea
 
 At this point the local deployment is functional, bar the checkout feature using Stripe. To add this functionality, sign up for an account with [Stripe](www.stripe.com), collect the following variables to add to the ‘.env’ file
 
-
-
-    *   STRIPE_SECRET_KEY = Value
-    *   STRIPE_PUBLIC_KEY = Value
-    *   STRIPE_WH_KEY = Value
+ *   STRIPE_SECRET_KEY = Value
+ *   STRIPE_PUBLIC_KEY = Value
+ *   STRIPE_WH_KEY = Value
 
 Please note that for testing the checkout feature using Stripe, the test card number is: 4242 4242 4242 (the CVC and expiry date can be any number)
 
-**Remote Deployment**
+### Remote Deployment
 
 **The deployed site can be found at: https://jw-photography.herokuapp.com**
-
 
 
 *   Ensure that you have Procfile created to tell Heroku the type of application using gunicorn and how to run it
 *   Visit [Heroku]([www.heroku.com](www.heroku.com)), register and create a new app
 *   In the deploy tab set GitHub as deployment method and search for repository (will have to sign into GitHub if a new user)
     *   Click enable automatic deploys to push to Heroku master when pushing to GitHub
-    *   In Resources tab, in search bar, look for Heroku Postgress and select Hobby Dev - Free - update to remote database
+    *   In Resources tab, in search bar, look for Heroku Postgres and select Hobby Dev - Free - update to remote database
 *   In the terminal enter `heroku login -i` and enter your credentials
 *   In the terminal enter `heroku git:remote -a [name of Heroku app]`
 *   Initialise a new commit 
@@ -825,18 +873,36 @@ Please note that for testing the checkout feature using Stripe, the test card nu
     *   STRIPE_PUBLIC_KEY = Value
     *   STRIPE_WH_KEY = Value
     *   USE_AWS = True
-*   Add the above variable names to the settings.py file
+*   The above variables, with the exception of USE_AWS ought to be saved in the settings.py file in the following format:
+	*`AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', '')`
+ * Make final migrations, in the terminal enter:
+ 	* `python3 manage.py makemigrations`
+    * `python3 manage.py migrate`
+  * Once the Heroku build is migrated and completed you can open the app
+  * Additional objects can be added to the app through the admin panel, and media saved in the S3 bucket
 
 ## Credits 
 
+### Content 
+
+* The Checkout, Profiles and Bag apps were taken from Code Institute mini-project
+* Widgets.py files in Blog and Products app were taken from Code Institute mini-project
+* *like_view* in Blog app was taken from Youtube [Codemy tutorial](https://www.youtube.com/watch?v=PXqRPqDjDgc&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=18)
+* *add_comment* view in Blog app was inspired by Youtube [Coedmy tutorial](https://www.youtube.com/watch?v=OuOB9ADT_bo&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=34)
+* Change frame colour feature was inspired by Youtube [The Webshala](https://www.youtube.com/watch?v=lGNwc_DLRfw)
+* [Compress Jpg](https://compressjpeg.com/) used to compress images
+* Pagination inspired by Youtube video [Parwiz Forogh](https://www.youtube.com/watch?v=N_TWOfLlc7A)
+
 ### Media
 
-
-
-### Code 
+* All product images are owned by me
+	* *No Image* available image was taken from [Google](https://www.google.com/search?q=no+image+available+image&tbm=isch&ved=2ahUKEwjggIKRuLbrAhXJuxoKHY43C9MQ2-cCegQIABAA&oq=no+image+available+&gs_lcp=CgNpbWcQARgCMgQIABBDMgQIABBDMgQIABBDMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIAFDZfFjZfGDhiwFoAHAAeACAAUmIAUmSAQExmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=IQ9FX6DsHMn3ao7vrJgN&bih=978&biw=1920#imgrc=d2Y8RJMlsclozM&imgdii=KG6Rbsh8IbhRxM)
+	* Picture of camera in blog was was taken from [Electronics Frontier](https://www.electronicsfrontier.com/nikon-d3500-digital-slr-camera-af-p-18-55mm-f-3-5-5-6g-vr-lens-kit.html?utm_source=shopello_gb&utm_medium=cpo&utm_campaign=google+shopping+ads&utm_term=misc-16284&utm_content=Cj0KCQjw7ZL6BRCmARIsAH6XFDIbHOnDNTirkwUFL8m3GAQmN5stuvAeXLoPDpv3-OBvgqXPpi3nlrAaAqNiEALw_wcB%3B22%3B0)
+* Used [Compress Jpg](https://compressjpeg.com/) to compress product image files
+* Used [Mastering Markdown](https://jbt.github.io/markdown-editor/#ux) as a Markdown Editor
 
 
 
 ### Acknowledgements
 
- A big thank you to my mentor, Gerry McBride for  support and positive feedback throughout the project. A special thanks as well to all the Code Institute online support team for their continued patience and encouragement throughout the project.
+ A big thank you to my mentor, Gerry McBride for  support and positive feedback throughout the project. A special thanks as well to Roz and Tom for continued support and all the Code Institute online support team for their patience and encouragement throughout the project.

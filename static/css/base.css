@@ -232,6 +232,7 @@ footer i {
 
 a {
     color: black;
+    cursor: pointer;
 }
 
 /* Button css - taken from code institute mini project */
@@ -295,9 +296,6 @@ a {
     cursor: pointer;
 }
 
-.bag-btn {
-    cursor: pointer;
-}
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
