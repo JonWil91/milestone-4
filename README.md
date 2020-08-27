@@ -151,6 +151,7 @@ Content Management
 4. As an admin I want to be able to add blog content within the site
 5. As an admin I want to be able to edit blog content within the site
 6. As an admin I want to be able to delete blog content within the site
+7. As an admin I want to ensure the home page always displays the top rated products
 
 
 ### **Colour Scheme**
@@ -167,6 +168,8 @@ Throughout the site blue is used as a colour to signify an option to edit/update
 
 
 ### **Wireframes**
+
+[Link to wireframes folder]([https://github.com/JonWil91/milestone-4/tree/master/static/wireframes](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes))
 
 Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience.. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
 
@@ -254,19 +257,9 @@ Testing scripts have been written to test all user stories and ensure they work 
 
 # **AUTOMATION TESTING WAS DONE...**
 
-
-
-
-<details>
-
-<summary>CLICK HERE to expand the full <b>Test Scripts</b>.</summary>
-
 Blog:
 
 _As a visitor I want to be able to view an overview of the latest blog posts_
-
-
-
 
 
 
@@ -546,7 +539,7 @@ _As a registered user, if I forget a password I want an option to reset it_
 
 
 *   Pre-requisites: \
-– – Registered user is on desktop, on the homepage & does not have access to account
+– – Registered user is on desktop, on the homepage & is not logged in
 *   Steps:
     9. Click on My Account button in the navigation bar
     10. Select Sign In from the dropdown \
@@ -565,6 +558,7 @@ Expectation:
 
 
 *   Receive confirmation message that changed password successfully
+*   Change password form is replaced with text stating ‘Your password is now changed’
 
 Shopping Bag
 
@@ -853,6 +847,7 @@ _As an admin I want to be able to delete product content within the site_
 Expectation:
 *   Confirmation message stating product successfully deleted
 *   A redirect to Gallery page
+*   Deleted product is no longer displayed on Gallery page
 
 _As an admin I want to be able to add blog content within the site_
 
@@ -901,8 +896,42 @@ _As an admin I want to be able to delete blog content within the site_
 Expectation:
 *   Confirmation message stating blog successfully deleted
 *   A redirect to the Blogs page
+*   Deleted blog post is no longer displayed on Blogs page
 
-</details>
+_As an admin I want to ensure the homepage always displays the top rated products (downgrade a top rated product)_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, logged in and has identified a change in one of the top rated products. This script works on homepage, Gallery page and product details page
+*   Steps:
+    4. Click on edit button under product to be changed \
+– – See edit product form with current information included \
+– – See alert message warning edit status is live
+    5. Reduce product rating 
+    6. Click Update Product button
+    7. See Confirmation message stating product successfully updated and redirected to the updated product
+    8. Click homepage link in navigation bar \
+Expectation:
+*   Amended product is no longer displayed on homepage and replaced by new top product
+
+_As an admin I want to ensure the homepage always displays the top rated products (upgrade product currently not top rated)_
+
+
+
+*   Pre-requisites: \
+– – Admin is on desktop, logged in and has identified a product currently not top rated. This script works on Gallery page and product details page
+*   Steps:
+    9. Click on edit button under chosen product \
+– – See edit product form with current information included \
+– – See alert message warning edit status is live
+    10. Increase product rating to co-align with the top products
+    11. Click Update Product button
+    12. See Confirmation message stating product successfully updated and redirected to the updated product
+    13. Click Home link in navigation bar \
+Expectation:
+*   Amended product is displayed on homepage in top three products  \
+
 
 
 ### **Differences in content display across different devices**
@@ -1030,6 +1059,7 @@ The deployed site can be found at: https://jw-photography.herokuapp.com
     *   `git add .`
     *   `git commit -m "[git commit message]"`
     *   `git push`
+    *   ``git push heroku master` if git push fails to push to Heroku automatically`
 *   Create an AWS account, set up an S3 bucket, create a user and policy to authorise
     *   I selected London as the region which is written as ‘eu-west-2’ in the settings.py file which was created from the clone command
 *   Using an email provider such as Gmail, set up a profile to access EMAIL_HOST_PASS and EMAIL_HOST_USER credentials
@@ -1066,6 +1096,7 @@ The deployed site can be found at: https://jw-photography.herokuapp.com
 *   Change frame colour feature was inspired by Youtube [The Webshala](https://www.youtube.com/watch?v=lGNwc_DLRfw)
 *   [Compress Jpg](https://compressjpeg.com/) used to compress images
 *   Pagination inspired by Youtube video [Parwiz Forogh](https://www.youtube.com/watch?v=N_TWOfLlc7A)
+*   [HeictoJPEG]([https://heictojpg.com/](https://heictojpg.com/)) used to convert HEIC wireframes to JPG format
 
 
 ### **Media**
