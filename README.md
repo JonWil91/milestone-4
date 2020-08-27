@@ -36,7 +36,7 @@ When making a payment on the site,  please use the following Stripe test card de
     *   [Wireframes](#wireframes)
 *   [Features](#features)
     *   [Existing Features](#existing-features)
-    *   [Additional Features to be Implemented](#additional-features-to-be-implemented)
+    *   [Future Features](#future-features)
 *   [Technologies Used](#technologies-used)
 *   [Testing](#testing)
     *   [Code Validation](#code-validation)
@@ -256,6 +256,10 @@ Testing scripts have been written to test all user stories and ensure they work 
 
 
 # **AUTOMATION TESTING WAS DONE...**
+
+<details>
+
+<summary>CLICK HERE to expand the full <b>Test Scripts</b>.</summary>
 
 Blog:
 
@@ -932,7 +936,7 @@ _As an admin I want to ensure the homepage always displays the top rated product
 Expectation:
 *   Amended product is displayed on homepage in top three products  \
 
-
+</details>
 
 ### **Differences in content display across different devices**
 
