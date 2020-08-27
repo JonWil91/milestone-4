@@ -254,8 +254,7 @@ The majority of testing for this project was done manually, however online valid
 
 Testing scripts have been written to test all user stories and ensure they work as intended. The attached test scripts are based on testing on a desktop as the steps sometimes vary for tablet & mobile, as indicated below.
 
-
-# **AUTOMATION TESTING WAS DONE...**
+Due to time constraints there was limited automated testing undertaken. In the event that another developer were to become involved with the app and make additions to the `models.py` file, tests were written for the forms of the blog and contact apps to ensure that only the selected fields would be displayed for user input. The following apps were tested to ensure that the return status code was equal to 200 upon loading: bag, blog, contact, home and products. This result in a total of 9 successful tests.
 
 <details>
 
