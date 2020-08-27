@@ -13,7 +13,7 @@ def contact(request):
         form = ContactForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Thanks {user}, your message has been sent and will be responded to as soon as possible')
+            messages.success(request, f'Thanks {user}, your message has been submitted and will be responded to as soon as possible')
             return redirect(reverse('index'))
         else:
             messages.error(request, 'Failed to send message. Please ensure the form is valid.')
