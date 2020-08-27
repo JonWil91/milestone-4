@@ -30,24 +30,24 @@ When making a payment on the site,  please use the following Stripe test card de
 
 
 
-*   [UX](https://jbt.github.io/markdown-editor/#ux)
-    *   [User Stories](https://jbt.github.io/markdown-editor/#user-stories)
-    *   [Colour Scheme](https://jbt.github.io/markdown-editor/#colour-scheme)
-    *   [Wireframes](https://jbt.github.io/markdown-editor/#wireframes)
-*   [Features](https://jbt.github.io/markdown-editor/#features)
-    *   [Existing Features](https://jbt.github.io/markdown-editor/#existing-features)
-    *   [Additional Features to be Implemented](https://jbt.github.io/markdown-editor/#additional-features-to-be-implemented)
-*   [Technologies Used](https://jbt.github.io/markdown-editor/#technologies-used)
-*   [Testing](https://jbt.github.io/markdown-editor/#testing)
-    *   [Code Validation](https://jbt.github.io/markdown-editor/#code-validation)
-    *   [Compatibility](https://jbt.github.io/markdown-editor/#compatibility)
-*   [Deployment](https://jbt.github.io/markdown-editor/#deployment)
-    *   [Local Deployment](https://jbt.github.io/markdown-editor/#local-deployment)
-    *   [Remote Deployment](https://jbt.github.io/markdown-editor/#remote-deployment)
-*   [Credits](https://jbt.github.io/markdown-editor/#credits)
-    *   Content
-    *   [Code](https://jbt.github.io/markdown-editor/#code)
-    *   [Acknowledgements](https://jbt.github.io/markdown-editor/#acknowledgements)
+*   [UX](#ux)
+    *   [User Stories](#user-stories)
+    *   [Colour Scheme](#colour-scheme)
+    *   [Wireframes](#wireframes)
+*   [Features](#features)
+    *   [Existing Features](#existing-features)
+    *   [Additional Features to be Implemented](#additional-features-to-be-implemented)
+*   [Technologies Used](#technologies-used)
+*   [Testing](#testing)
+    *   [Code Validation](#code-validation)
+    *   [Compatibility](#compatibility)
+*   [Deployment](#deployment)
+    *   [Local Deployment](#local-deployment)
+    *   [Remote Deployment](#remote-deployment)
+*   [Credits](#credits)
+    *   [Content](#content)
+    *   [Code](#code)
+    *   [Acknowledgements](#acknowledgements)
 
 
 ## **UX**
@@ -169,7 +169,7 @@ Throughout the site blue is used as a colour to signify an option to edit/update
 
 ### **Wireframes**
 
-[Link to wireframes folder]([https://github.com/JonWil91/milestone-4/tree/master/static/wireframes](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes))
+[Link to wireframes folder](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes)
 
 Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience.. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
 
