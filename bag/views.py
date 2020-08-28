@@ -11,6 +11,7 @@ def view_bag(request):
 
     return render(request, 'bag/bag.html')
 
+
 @login_required
 def add_to_bag(request, item_id):
     """Add a quantity of the specified product to the shopping bag"""

@@ -42,6 +42,7 @@ When making a payment on the site,  please use the following Stripe test card de
     *   [Future Features](#future-features)
 *   [Technologies Used](#technologies-used)
 *   [Testing](#testing)
+    *   [Testing Scripts](#testing-scripts)
     *   [Code Validation](#code-validation)
     *   [Compatibility](#compatibility)
 *   [Deployment](#deployment)
@@ -61,7 +62,10 @@ The user is able to peruse all available products in the gallery page, and can e
 
 Once a user is registered, they also have the ability to  send a message to the admin panel through the contact page, and to view the blog page where they can read, comment and like various blog posts, as long as they are logged in.
 
-User types are split into the following categories: - Visitor - Person on the website (either not registered with an account or not logged in) - Registered User - Person on the website with an account (logged in) -Admin - Owner of the website (logged in)
+User types are split into the following categories:
+* Visitor - Person on the website (either not registered with an account or not logged in)
+* Registered User - Person on the website with an account (logged in)
+* Admin - Owner of the website (logged in)
 
 
 ### **User stories:**
@@ -174,7 +178,7 @@ Throughout the site blue is used as a colour to signify an option to edit/update
 
 [Link to wireframes folder](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes)
 
-Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience.. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
+Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
 
 
 ## **Features**
@@ -259,9 +263,12 @@ Testing scripts have been written to test all user stories and ensure they work 
 
 Due to time constraints there was limited automated testing undertaken. In the event that another developer were to become involved with the app and make additions to the `models.py` file, tests were written for the forms of the blog and contact apps to ensure that only the selected fields would be displayed for user input. The following apps were tested to ensure that the return status code was equal to 200 upon loading: bag, blog, contact, home and products. This result in a total of 9 successful tests.
 
+### Testing Scripts
+
 <details>
 
 <summary>CLICK HERE to expand the full <b>Test Scripts</b>.</summary>
+
 
 Blog:
 
@@ -272,7 +279,7 @@ _As a visitor I want to be able to view an overview of the latest blog posts_
 *   Pre-requisites:
     *   Visitor is on desktop and on the homepage
 *   Steps: \
-– 1. Click blog button in navigation bar
+	1. Click blog button in navigation bar
 
 Expectation :
 
@@ -290,7 +297,7 @@ _As a visitor I want to be able to view a single, full blog post_
 *   Pre-requisites:
     *   Visitor is on desktop and on the blog page
 *   Steps: \
-– 1. Click a blog’s title
+	1. Click a blog’s title
 
 Expectation:
 
@@ -307,12 +314,12 @@ _As a registered user, I want to be able to comment on a single blog post_
 *   Pre-requisites:
     *   Registered User is logged in on desktop and on the blog page
 *   Steps: \
-– 1. Click a blog’s title \
-– – See single blog post \
-– 2. Click Add Comment link \
-– – See comment form displayed \
-– 3. Fill in add comment form \
-– 4. Click submit button
+	1. Click a blog’s title \
+	– – See single blog post \
+	2. Click Add Comment link \
+	– – See comment form displayed \
+	3. Fill in add comment form \
+	4. Click submit button
 
 Expectation:
 
@@ -329,10 +336,10 @@ _As a registered user, I want to be able to add a like to a single blog post_
 *   Pre-requisites:
     *   Registered User is logged in on desktop and on the blog page
 *   Steps: \
-– 1. Click a blog’s title \
-– – See single blog post \
-– – Like button is colour blue as user not clicked \
-– 2. Click Like button
+	1. Click a blog’s title \
+	– – See single blog post \
+	– – Like button is colour blue as user not clicked \
+	2. Click Like button
 
 Expectation:
 
@@ -1016,8 +1023,7 @@ Expectation:
 *   I used the W3C HTML Validator tool to validate my HTML code. The W3C Validator tool doesn't recognise the Jinja templating, which resulted in it showing a lot of errors in relation to the Jinja code. This meant carefully going through such html files to ensure that they were formatted correctly.
 *   I used the W3C CSS Validator tool to validate my CSS code.
 *   I used the JSHint tool to validate my JavaScript syntax.
-*   I used the Pep8 Online tool to validate my Python syntax. I had to update a number of lines that were too long and blank spaces I had initially missed.
-
+*   I used the Pep8 Online tool to validate my Python syntax. I had to update a number of blank spaces that had been missed. Unfortunately due to time constraints I was not able to fix all the E501 errors as I didn’t want to risk causing widespread issues before submission.
 
 ## **Compatibility**
 

@@ -7,4 +7,3 @@ class TestProductViews(TestCase):
         response = self.client.get('/products/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
-

@@ -175,4 +175,3 @@ def like_view(request, pk):
         liked = True
 
     return HttpResponseRedirect(reverse('blog_detail', args=[str(pk)]))
-
