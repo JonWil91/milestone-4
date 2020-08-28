@@ -13,4 +13,4 @@ class Contact(models.Model):
     date_added = models.DateTimeField(auto_now_add=True, editable=True)
 
     def __str__(self):
-        return self.message_title
+        return self.name
