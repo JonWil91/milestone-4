@@ -1,3 +1,6 @@
+<!-- Copy and paste the converted output. -->
+
+
 Full Stack Milestone Project 4 - Code Institute
 
 
@@ -169,7 +172,7 @@ Throughout the site blue is used as a colour to signify an option to edit/update
 
 ### **Wireframes**
 
-[Link to wireframes folder](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes)
+[Link to wireframes folder]([https://github.com/JonWil91/milestone-4/tree/master/static/wireframes](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes))
 
 Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience.. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
 
@@ -266,8 +269,8 @@ _As a visitor I want to be able to view an overview of the latest blog posts_
 
 
 
-*   Pre-requisites: \
-– Visitor is on desktop and on the homepage
+*   Pre-requisites:
+    *   Visitor is on desktop and on the homepage
 *   Steps: \
 – 1. Click blog button in navigation bar
 
@@ -284,8 +287,8 @@ _As a visitor I want to be able to view a single, full blog post_
 
 
 
-*   Pre-requisites: \
-– Visitor is on desktop and on the blog page
+*   Pre-requisites:
+    *   Visitor is on desktop and on the blog page
 *   Steps: \
 – 1. Click a blog’s title
 
@@ -301,8 +304,8 @@ _As a registered user, I want to be able to comment on a single blog post_
 
 
 
-*   Pre-requisites: \
-*   registered User is logged in on desktop and on the blog page
+*   Pre-requisites:
+    *   Registered User is logged in on desktop and on the blog page
 *   Steps: \
 – 1. Click a blog’s title \
 – – See single blog post \
@@ -323,8 +326,8 @@ _As a registered user, I want to be able to add a like to a single blog post_
 
 
 
-*   Pre-requisites: \
-– registered User is logged in on desktop and on the blog page
+*   Pre-requisites:
+    *   Registered User is logged in on desktop and on the blog page
 *   Steps: \
 – 1. Click a blog’s title \
 – – See single blog post \
@@ -344,10 +347,10 @@ _As a visitor I want to be able to find products within the site based on typing
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop and on the homepage \
+*   Pre-requisites:
+    *   Visitor is on desktop and on the homepage \
 Steps:
-    1. Type search request into the search bar
+1. Type search request into the search bar
 
 Expectations:
 
@@ -362,10 +365,10 @@ _As a visitor I want to be able to view an overview of the products available_
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop and on the homepage
+*   Pre-requisites:
+    *   Visitor is on desktop and on the homepage
 *   Steps:
-    1. Click Gallery button in navigation bar
+1. Click Gallery button in navigation bar
 
 Expectation:
 
@@ -379,10 +382,11 @@ _As a visitor I want to be able to filter the total products displayed_
 
 
 
-*   Pre-requisites: -- -- Visitor is on desktop and on the Gallery page
+*   Pre-requisites:
+    *   Visitor is on desktop and on the Gallery page
 *   Steps:
-    1. Click on All Products dropdown link
-    2. Select filter option
+1. Click on All Products dropdown link
+2. Select filter option
 
 Expectation:
 
@@ -394,7 +398,8 @@ _As a visitor I want to be able to filter products by geographic category_
 
 
 
-*   Pre-requisites: -- -- Visitor is on desktop and on the Gallery page
+*   Pre-requisites:
+    *   Visitor is on desktop and on the Gallery page
 *   Steps:
 1. Click on preferred geographic filter option
 
@@ -408,10 +413,10 @@ _As a visitor I want to be able to view individual product details_
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop and on the Gallery page
+*   Pre-requisites:
+    *   Visitor is on desktop and on the Gallery page
 *   Steps:
-    1. Click on Product image
+1. Click on Product image
 
 Expectation:
 
@@ -423,13 +428,13 @@ _As a registered user, I want to be able to add a product into the shopping bag_
 
 
 
-*   Pre-requisites: \
-– – Registered user is on desktop, logged in and on Product details page
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on Product details page
 *   Steps:
-    1. Select frame colour
-    2. Select size from dropdown
-    3. Select quantity of product
-    4. Click Add to Bag button
+1. Select frame colour
+2. Select size from dropdown
+3. Select quantity of product
+4. Click Add to Bag button
 
 Expectation:
 
@@ -443,13 +448,13 @@ _As a visitor I want to be able to submit a message to the site admin_
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop and on the homepage
+*   Pre-requisites:
+    *   Visitor is on desktop and on the homepage
 *   Steps:
-    1. Click on Contact button in navigation bar \
+1. Click on Contact button in navigation bar \
 – – See a contact form
-    2. Fill in contact form
-    3. Click send message button
+2. Fill in contact form
+3. Click send message button
 
 Expectation:
 
@@ -462,10 +467,10 @@ _As an admin I want to be able to view messages submitted by visitors and users_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, logged in and on the admin home page URL
+*   Pre-requisites:
+    *   Admin is on desktop, logged in and on the admin home page URL
 *   Steps:
-    1. Click the Contact model
+1. Click the Contact model
 
 Expectation:
 
@@ -479,18 +484,18 @@ _As a visitor I want to be able to register for an account_
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop, on the homepage & does not have an account
+*   Pre-requisites:
+    *   Visitor is on desktop, on the homepage & does not have an account
 *   Steps:
-    1. Click on My Account button in the navigation bar
-    2. Select Register from the dropdown \
+1. Click on My Account button in the navigation bar
+2. Select Register from the dropdown \
 – – See a Sign Up form
-    3. Fill in sign up form
-    4. Click Sign Up button
-    5. Visitor directed to check email for link
-    6. Click link sent to email to confirm registration
-    7. – – See confirm registration page
-    8. Visitor to confirm email then Click Confirm button
+3. Fill in sign up form
+4. Click Sign Up button
+5. Visitor directed to check email for link
+6. Click link sent to email to confirm registration
+7. – – See confirm registration page
+8.  Visitor to confirm email then Click Confirm button
 
 Expectation:
 
@@ -502,14 +507,14 @@ _As a registered user I want to be able to login to my account_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop,on the homepage and not logged in
+*   Pre-requisites:
+    *   Registered user is on desktop,on the homepage and not logged in
 *   Steps:
-    1. Click on My Account button in the navigation bar
-    2. Select Log In from the dropdown \
+1. Click on My Account button in the navigation bar
+2. Select Log In from the dropdown \
 – – See a Sign in form
-    3. Complete sign in form
-    4. Click Sign In
+3. Complete sign in form
+4. Click Sign In
 
 Expectation:
 
@@ -522,13 +527,13 @@ _As a registered user I want to be able to log out of my account_
 
 
 
-*   Pre-requisites: \
-– – Registered user is on desktop ,on the homepage and logged in
+*   Pre-requisites:
+    *   Registered user is on desktop ,on the homepage and logged in
 *   Steps:
-    1. Click on username in the navigation bar
-    2. Select Sign Out from the dropdown \
+1. Click on username in the navigation bar
+2. Select Sign Out from the dropdown \
 – – See a Sign Out confirmation button
-    3. Click Sign Out
+3. Click Sign Out
 
 Expectation:
 
@@ -541,20 +546,20 @@ _As a registered user, if I forget a password I want an option to reset it_
 
 
 
-*   Pre-requisites: \
-– – Registered user is on desktop, on the homepage & is not logged in
+*   Pre-requisites:
+    *   Registered user is on desktop, on the homepage & is not logged in
 *   Steps:
-    9. Click on My Account button in the navigation bar
-    10. Select Sign In from the dropdown \
+1. Click on My Account button in the navigation bar
+2. Select Sign In from the dropdown \
 – – See a Sign In form
-    11. Click Forgot Password link \
+3. Click Forgot Password link \
 – – See a Password Reset form
-    12. Enter email address
-    13. Click Reset Password button
-    14. Click link sent to email to reset password
-    15. – – See Change Password form
-    16. Registered user enters new password twice
-    17. Click Change Password button
+4. Enter email address
+5. Click Reset Password button
+6. Click link sent to email to reset password
+7. – – See Change Password form
+8. Registered user enters new password twice
+9. Click Change Password button
 
 Expectation:
 
@@ -569,10 +574,10 @@ _As a registered user I want to be able to view my shopping bag_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the homepage. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the homepage. Items are in the shopping bag.
 *   Steps:
-    1. Click on Shopping bag icon
+1. Click on Shopping bag icon
 
 Expectation:
 
@@ -585,12 +590,12 @@ _As a registered user I want to be able to edit the items in my shopping bag_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Shopping bag page. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Shopping bag page. Items are in the shopping bag.
 *   Steps:
-    1. Click on the + or - symbols to alter the quantity of selected product \
+1. Click on the + or - symbols to alter the quantity of selected product \
 – – This can also be achieved by typing a new number in the text box
-    2. Click the update button \
+2. Click the update button \
 Expectation:
 *   Receive a confirmation message that the shopping bag has been updated
 *   Product quantity and subtotal change to reflect the update
@@ -599,10 +604,10 @@ _As a registered user I want to be able to remove an item from my shopping bag_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
 *   Steps:
-    1. Click remove button next to applicable product \
+1. Click remove button next to applicable product \
 Expectation:
 *   Receive a confirmation message that the product has been removed
 *   Be redirected to a shopping bag page confirming the applicable product has been removed
@@ -614,14 +619,14 @@ _As a user I want to be able to securely checkout and make a payment for my prod
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
 *   Steps:
-    1. Click on Secure Checkout button \
+1. Click on Secure Checkout button \
 – – See a checkout form with order summary
-    2. Fill in personal details
-    3. Fill in Stripe success test card number 4242 4242 4242 4242
-    4. Click Complete Order
+2. Fill in personal details
+3. Fill in Stripe success test card number 4242 4242 4242 4242
+4. Click Complete Order
 
 Expectation:
 
@@ -635,16 +640,16 @@ _As a registered user I want the checkout to handle secure customer authenticati
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
 *   Steps:
-    5. Click on Secure Checkout button \
+1. Click on Secure Checkout button \
 – – See a checkout form with order summary
-    6. Fill in personal details
-    7. Fill in Stripe authentication test card number 4000 0025 0000 3155
-    8. Click Complete Order \
+2. Fill in personal details
+3. Fill in Stripe authentication test card number 4000 0025 0000 3155
+4. Click Complete Order \
 – – See loading screen followed by authentication model pop up
-    9. Click complete authentication
+5. Click complete authentication
 
 Expectation:
 
@@ -658,15 +663,15 @@ _As a registered user I want the checkout to handle secure customer authenticati
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
 *   Steps:
-    *   Click on Secure Checkout button \
+1. Click on Secure Checkout button \
 – – See a checkout form with order summary
-    *   Fill in personal details
-    *   Fill in Stripe authentication test card number 4000 0025 0000 3155
-    *   Click Complete Order
-    *   Click fail authentication
+2. Fill in personal details
+3. Fill in Stripe authentication test card number 4000 0025 0000 3155
+4. Click Complete Order
+5. Click fail authentication
 
 Expectation:
 
@@ -678,14 +683,14 @@ _As a registered user I want to be told if the payment fails_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Shopping Bag page. Items are in the shopping bag.
 *   Steps:
-    *   Click on Secure Checkout button \
+1. Click on Secure Checkout button \
 – – See a checkout form with order summary
-    *   Fill in personal details
-    *   Fill in Stripe authentication test card number 4000 0000 0000 9995
-    *   Click Complete Order
+2. Fill in personal details
+3. Fill in Stripe authentication test card number 4000 0000 0000 9995
+4. Click Complete Order
 
 Expectation:
 
@@ -697,12 +702,12 @@ _As a registered user I want my checkout details to be saved to my profile_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the Checkout page with items in shopping bag.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Checkout page with items in shopping bag.
 *   Steps:
-    1. Complete delivery form
-    2. Click ‘save this delivery information to my profile’ button
-        1. Click Complete Order
+1. Complete delivery form
+2. Click ‘save this delivery information to my profile’ button
+3. Click Complete Order
 
 Expectation:
 
@@ -716,11 +721,11 @@ _As a registered user I want information from my order to be saved and viewable_
 
 
 
-*   Pre-requisites: \
-– – registered user is on desktop, logged in and on the homepage. User has ‘save delivery information to profile’ selected on checkouts.
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the homepage. User has ‘save delivery information to profile’ selected on checkouts.
 *   Steps:
-    1. Click on user name in navigation bar
-    2. Select ‘My Profile’ from dropdown list
+1. Click on user name in navigation bar
+2. Select ‘My Profile’ from dropdown list
 
 Expectation:
 
@@ -733,11 +738,11 @@ _As a registered user I want to be able to update my delivery information on my 
 
 
 
-*   Pre-requisites: \
-– – Registered user is on desktop, logged in and on the Profile page
+*   Pre-requisites:
+    *   Registered user is on desktop, logged in and on the Profile page
 *   Steps:
-    1. Fill in default delivery information form
-    2. Click Update Information button
+1. Fill in default delivery information form
+2. Click Update Information button
 
 Expectation:
 
@@ -749,12 +754,12 @@ _As a registered user I want to be able to update my delivery information on the
 
 
 
-*   Pre-requisites: \
-– – registered User is on desktop, logged in and on the Checkout page with items in shopping bag.
+*   Pre-requisites:
+    *   Registered User is on desktop, logged in and on the Checkout page with items in shopping bag.
 *   Steps:
-    1. Update existing delivery info
-    2. Click ‘save this delivery information to my profile’ button
-    3. Click Complete Order
+1. Update existing delivery info
+2. Click ‘save this delivery information to my profile’ button
+3. Click Complete Order
 
 Expectation:
 
@@ -768,12 +773,12 @@ _As a visitor I would like to be able to view blog content split into separate p
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop and on the homepage
+*   Pre-requisites:
+    *   Visitor is on desktop and on the homepage
 *   Steps:
-    1. Click on Blog button in the navigation bar
-    2. Blog page loads, with pagination feature stating what number page visitor is on and total number of pages available
-    3. Click Next
+1. Click on Blog button in the navigation bar
+2. Blog page loads, with pagination feature stating what number page visitor is on and total number of pages available
+3. Click Next
 
 Expectation:
 
@@ -790,10 +795,10 @@ _As a visitor I would like to be able to preview what a product looks like with 
 
 
 
-*   Pre-requisites: \
-– – Visitor is on desktop and on the product details page
+*   Pre-requisites:
+    *   Visitor is on desktop and on the product details page
 *   Steps:
-    1. Click on any of the coloured circular buttons under Frame Colour
+1. Click on any of the coloured circular buttons under Frame Colour
 
 Expectation:
 
@@ -807,14 +812,14 @@ _As an admin I want to be able to add product content within the site_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, on the homepage and logged in
+*   Pre-requisites:
+    *   Admin is on desktop, on the homepage and logged in
 *   Steps:
-    1. Click on admin username from the navigation bar
-    2. Click Add Product from dropdown \
+1. Click on admin username from the navigation bar
+2. Click Add Product from dropdown \
 – – See an add product form
-    3. Fill in add product form
-    4. Click Add Product button
+3. Fill in add product form
+4. Click Add Product button
 
 Expectation:
 
@@ -827,15 +832,19 @@ _As an admin I want to be able to edit product content within the site_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop and logged in. This script works on homepage, Gallery page and product details page
+*   Pre-requisites:
+    *   Admin is on desktop and logged in. This script works on homepage, Gallery page and product details page
 *   Steps:
-    1. Click on edit button \
+1. Click on edit button \
 – – See edit product form with current information included \
 – – See alert message warning edit status is live
-    2. Make necessary changes to product
-    3. Click Update Product button \
+2. Make necessary changes to product
+3. Click Update Product button
+
 Expectation:
+
+
+
 *   Confirmation message stating product successfully updated
 *   A redirect to the updated product
 
@@ -843,11 +852,15 @@ _As an admin I want to be able to delete product content within the site_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop and logged in. This script works on homepage, Gallery page and product details page
+*   Pre-requisites:
+    *   Admin is on desktop and logged in. This script works on homepage, Gallery page and product details page
 *   Steps:
-    1. Click on delete button \
+1. Click on delete button
+
 Expectation:
+
+
+
 *   Confirmation message stating product successfully deleted
 *   A redirect to Gallery page
 *   Deleted product is no longer displayed on Gallery page
@@ -856,14 +869,14 @@ _As an admin I want to be able to add blog content within the site_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, logged in and on the homepage
+*   Pre-requisites:
+    *   Admin is on desktop, logged in and on the homepage
 *   Steps:
-    1. Click on admin username from the navigation bar
-    2. Click Add Blog from dropdown \
+1. Click on admin username from the navigation bar
+2. Click Add Blog from dropdown \
 – – See an add blog form
-    3. Fill in add blog form
-    4. Click Add Blog button
+3. Fill in add blog form
+4. Click Add Blog button
 
 Expectation:
 
@@ -876,14 +889,14 @@ _As an admin I want to be able to edit blog content within the site_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, logged in and on the Blog page. This script works on the Blog page and individual blog posts.
+*   Pre-requisites:
+    *   Admin is on desktop, logged in and on the Blog page. This script works on the Blog page and individual blog posts.
 *   Steps:
-    1. Click on edit button \
+1. Click on edit button \
 – – See edit blog form with current information included \
 – – See alert message warning edit status is live
-    2. Make necessary changes to blog
-    3. Click Update Blog button \
+2. Make necessary changes to blog
+3. Click Update Blog button \
 Expectation:
 *   Confirmation message stating blog successfully updated
 *   A redirect to the updated blog post
@@ -892,11 +905,15 @@ _As an admin I want to be able to delete blog content within the site_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, logged in and on the Blog page. This script works on the Blog page and individual blog posts.
+*   Pre-requisites:
+    *   Admin is on desktop, logged in and on the Blog page. This script works on the Blog page and individual blog posts.
 *   Steps:
-    1. Click on delete button \
+1. Click on delete button
+
 Expectation:
+
+
+
 *   Confirmation message stating blog successfully deleted
 *   A redirect to the Blogs page
 *   Deleted blog post is no longer displayed on Blogs page
@@ -905,33 +922,38 @@ _As an admin I want to ensure the homepage always displays the top rated product
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, logged in and has identified a change in one of the top rated products. This script works on homepage, Gallery page and product details page
+*   Pre-requisites:
+    *   Admin is on desktop, logged in and has identified a change in one of the top rated products. This script works on homepage, Gallery page and product details page
 *   Steps:
-    4. Click on edit button under product to be changed \
+1. Click on edit button under product to be changed \
 – – See edit product form with current information included \
 – – See alert message warning edit status is live
-    5. Reduce product rating 
-    6. Click Update Product button
-    7. See Confirmation message stating product successfully updated and redirected to the updated product
-    8. Click homepage link in navigation bar \
+2. Reduce product rating 
+3. Click Update Product button
+4. See Confirmation message stating product successfully updated and redirected to the updated product
+5. Click homepage link in navigation bar
+
+ \
 Expectation:
+
+
+
 *   Amended product is no longer displayed on homepage and replaced by new top product
 
 _As an admin I want to ensure the homepage always displays the top rated products (upgrade product currently not top rated)_
 
 
 
-*   Pre-requisites: \
-– – Admin is on desktop, logged in and has identified a product currently not top rated. This script works on Gallery page and product details page
+*   Pre-requisites:
+    *   Admin is on desktop, logged in and has identified a product currently not top rated. This script works on Gallery page and product details page
 *   Steps:
-    9. Click on edit button under chosen product \
+1. Click on edit button under chosen product \
 – – See edit product form with current information included \
 – – See alert message warning edit status is live
-    10. Increase product rating to co-align with the top products
-    11. Click Update Product button
-    12. See Confirmation message stating product successfully updated and redirected to the updated product
-    13. Click Home link in navigation bar \
+2. Increase product rating to co-align with the top products
+3. Click Update Product button
+4. See Confirmation message stating product successfully updated and redirected to the updated product
+5. Click Home link in navigation bar \
 Expectation:
 *   Amended product is displayed on homepage in top three products  \
 
@@ -978,11 +1000,13 @@ Expectation:
 
 *    On the checkout page, the registered user's address is saved to the profile regardless of whether the checkbox was saved
     *   To be fixed for a future release
-*   The quantity selector on the bag page does not limit between 1 (min) and 99 (max) as the product details page does
+*   The quantity selector on the bag page does not limit between 1 (min) and 99 (max) on any device other than mobile
     *   To be fixed for a future release
 *   The pluralize function was not working on the blog details page for like/likes. A simple fix of a typo in the template
 *   Not all links has the CSS cursor added on, fixed as an oversight
-*   During development the category name for snow themed products was amended from _ski_hill_ to _snow_ to be more inclusive. Upon testing it was discovered that this change had been applied to the local deployment, but not the remote deployment so the product geographical filter _snow _didn’t return any results . This was remedied by amending the category name in the admin panel of the remote deployment.
+*   During development the category name for _snow_ themed products was amended from _ski_hill_ to _snow_ to be more inclusive. Upon testing it was discovered that this change had been applied to the local deployment, but not the remote deployment so the product geographical filter _snow _didn’t return any results . This was remedied by amending the category name in the admin panel of the remote deployment.
+*   The date of a submitted contact message doesn’t display in the admin panel
+    *   To be fixed for a future release
 
 
 ### **Code Validation**
@@ -995,15 +1019,15 @@ Expectation:
 *   I used the Pep8 Online tool to validate my Python syntax. I had to update a number of lines that were too long and blank spaces I had initially missed.
 
 
-## **Compatibility - TEST THIS AGAIN**
+## **Compatibility**
 
 To ensure that the website is accessible and runs across different devices and browsers, I have tested it on the following:
 
 
 
-*   Chrome
-*   Safari
-*   Firefox
+*   Chrome 
+*   Safari 
+*   Firefox - slight differences to certain CSS stylings but no change to functionality
 *   Opera
 *   Microsoft Edge
 
