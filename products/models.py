@@ -20,7 +20,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=False, blank=False)
     name = models.CharField(max_length=254)
     location = models.CharField(max_length=254, null=False, blank=False)
-    location_link = models.CharField(max_length=254, null=False, blank=False)
+    location_link = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField(null=False, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
