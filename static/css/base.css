@@ -4,11 +4,19 @@ html, body {
   width: 100%;
   background-color: #c3d8e2;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #page-container {
     height: 100%;;
 }
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+/* Product details page */
 
 #border-colour {
     color: white;
@@ -54,6 +62,8 @@ html, body {
 .brown-button {
     background-color: #945656;
 }
+
+/* /Product details page */
 
 
 a:hover {
@@ -230,11 +240,6 @@ footer i {
     width: 50px;
 }
 
-a {
-    color: black;
-    cursor: pointer;
-}
-
 /* Button css - taken from code institute mini project */
 
 .shop-now-button {
@@ -271,13 +276,11 @@ a {
     color: white;
 }
 
-/* /Button css  */
-
-
-
 .edit-button {
     color: blue;
 }
+
+/* /Button css  */
 
 /* Product Form - code below copied from Code Institute mini project video */
 
@@ -297,7 +300,6 @@ a {
     cursor: pointer;
 }
 
-
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #dc3545;
@@ -312,7 +314,6 @@ a {
 .product-category {
     padding: 5px;
 }
-
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
