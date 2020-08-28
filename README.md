@@ -278,8 +278,8 @@ _As a visitor I want to be able to view an overview of the latest blog posts_
 
 *   Pre-requisites:
     *   Visitor is on desktop and on the homepage
-*   Steps: \
-	1. Click blog button in navigation bar
+*   Steps:
+1. Click blog button in navigation bar
 
 Expectation :
 
@@ -296,8 +296,8 @@ _As a visitor I want to be able to view a single, full blog post_
 
 *   Pre-requisites:
     *   Visitor is on desktop and on the blog page
-*   Steps: \
-	1. Click a blog’s title
+*   Steps:
+1. Click a blog’s title
 
 Expectation:
 
@@ -313,13 +313,13 @@ _As a registered user, I want to be able to comment on a single blog post_
 
 *   Pre-requisites:
     *   Registered User is logged in on desktop and on the blog page
-*   Steps: \
-	1. Click a blog’s title \
-	– – See single blog post \
-	2. Click Add Comment link \
-	– – See comment form displayed \
-	3. Fill in add comment form \
-	4. Click submit button
+*   Steps:
+1. Click a blog’s title
+– – See single blog pos
+2. Click Add Comment link
+– – See comment form displayed
+3. Fill in add comment form
+4. Click submit button
 
 Expectation:
 
@@ -335,11 +335,11 @@ _As a registered user, I want to be able to add a like to a single blog post_
 
 *   Pre-requisites:
     *   Registered User is logged in on desktop and on the blog page
-*   Steps: \
-	1. Click a blog’s title \
-	– – See single blog post \
-	– – Like button is colour blue as user not clicked \
-	2. Click Like button
+*   Steps: 
+1. Click a blog’s title 
+– – See single blog post 
+– – Like button is colour blue as user not clicked 
+2. Click Like button
 
 Expectation:
 
@@ -355,7 +355,7 @@ _As a visitor I want to be able to find products within the site based on typing
 
 
 *   Pre-requisites:
-    *   Visitor is on desktop and on the homepage \
+    *   Visitor is on desktop and on the homepage
 Steps:
 1. Type search request into the search bar
 
