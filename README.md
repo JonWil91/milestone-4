@@ -172,7 +172,7 @@ Throughout the site blue is used as a colour to signify an option to edit/update
 
 ### **Wireframes**
 
-[Link to wireframes folder]([https://github.com/JonWil91/milestone-4/tree/master/static/wireframes](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes))
+[Link to wireframes folder](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes)
 
 Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience.. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
 
@@ -1086,7 +1086,7 @@ The deployed site can be found at: https://jw-photography.herokuapp.com
     *   `git add .`
     *   `git commit -m "[git commit message]"`
     *   `git push`
-    *   ``git push heroku master` if git push fails to push to Heroku automatically`
+    *   `git push heroku master` if git push fails to push to Heroku automatically`
 *   Create an AWS account, set up an S3 bucket, create a user and policy to authorise
     *   I selected London as the region which is written as ‘eu-west-2’ in the settings.py file which was created from the clone command
 *   Using an email provider such as Gmail, set up a profile to access EMAIL_HOST_PASS and EMAIL_HOST_USER credentials
