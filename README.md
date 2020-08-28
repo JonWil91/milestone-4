@@ -172,7 +172,7 @@ Throughout the site blue is used as a colour to signify an option to edit/update
 
 ### **Wireframes**
 
-[Link to wireframes folder]([https://github.com/JonWil91/milestone-4/tree/master/static/wireframes](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes))
+[Link to wireframes folder](https://github.com/JonWil91/milestone-4/tree/master/static/wireframes)
 
 Hand drawn wireframes were used for this project. There were a couple of alterations from the wireframes that had not been anticipated at the start of development as they improved user experience.. Examples such as improving the Product Purpose on the homepage so that the fact it is an e-commerce site for photo prints is immediately clear to visitors upon arrival.  Other alterations include using the space more effectively on the products detail page and having the navigation bar dropping down as a horizontal row instead of a vertical row on tablet and mobile devices.
 
@@ -1121,9 +1121,9 @@ The deployed site can be found at: https://jw-photography.herokuapp.com
 *   _like_view_ in Blog app was taken from Youtube [Codemy tutorial](https://www.youtube.com/watch?v=PXqRPqDjDgc&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=18)
 *   _add_comment_ view in Blog app was inspired by Youtube [Coedmy tutorial](https://www.youtube.com/watch?v=OuOB9ADT_bo&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=34)
 *   Change frame colour feature was inspired by Youtube [The Webshala](https://www.youtube.com/watch?v=lGNwc_DLRfw)
-*   [Compress Jpg](https://compressjpeg.com/) used to compress images
+*   [Compress Jpg](https://compressjpeg.com/) used to compress product image files
 *   Pagination inspired by Youtube video [Parwiz Forogh](https://www.youtube.com/watch?v=N_TWOfLlc7A)
-*   [HeictoJPEG]([https://heictojpg.com/](https://heictojpg.com/)) used to convert HEIC wireframes to JPG format
+*   [HeictoJPEG]([https://heictojpg.com/) used to convert HEIC wireframes to JPG format
 
 
 ### **Media**
@@ -1133,7 +1133,6 @@ The deployed site can be found at: https://jw-photography.herokuapp.com
 *   All product images are owned by me
     *   _No Image_ available image was taken from [Google](https://www.google.com/search?q=no+image+available+image&tbm=isch&ved=2ahUKEwjggIKRuLbrAhXJuxoKHY43C9MQ2-cCegQIABAA&oq=no+image+available+&gs_lcp=CgNpbWcQARgCMgQIABBDMgQIABBDMgQIABBDMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIAFDZfFjZfGDhiwFoAHAAeACAAUmIAUmSAQExmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=IQ9FX6DsHMn3ao7vrJgN&bih=978&biw=1920#imgrc=d2Y8RJMlsclozM&imgdii=KG6Rbsh8IbhRxM)
     *   Picture of camera in blog was was taken from [Electronics Frontier](https://www.electronicsfrontier.com/nikon-d3500-digital-slr-camera-af-p-18-55mm-f-3-5-5-6g-vr-lens-kit.html?utm_source=shopello_gb&utm_medium=cpo&utm_campaign=google+shopping+ads&utm_term=misc-16284&utm_content=Cj0KCQjw7ZL6BRCmARIsAH6XFDIbHOnDNTirkwUFL8m3GAQmN5stuvAeXLoPDpv3-OBvgqXPpi3nlrAaAqNiEALw_wcB%3B22%3B0)
-*   Used [Compress Jpg](https://compressjpeg.com/) to compress product image files
 *   Used [Mastering Markdown](https://jbt.github.io/markdown-editor/#ux) as a Markdown Editor
 
 
