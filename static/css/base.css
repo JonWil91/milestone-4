@@ -5,10 +5,7 @@ html, body {
   background-color: #c3d8e2;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-}
-
-#page-container {
-    height: 100%;;
+  height: 100%;
 }
 
 a {
