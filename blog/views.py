@@ -58,6 +58,7 @@ def add_blog(request):
 @login_required
 def edit_blog(request, blog_id):
     """ Edit a product in the store """
+    # If a bug occurs and customers can access Blog Management, they will not be able to access the page
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse, 'home')
@@ -86,6 +87,7 @@ def edit_blog(request, blog_id):
 @login_required
 def delete_blog(request, blog_id):
     """ Delete a blog from the store """
+    # If a bug occurs and customers can access Blog Management, they will not be able to access the page
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse, 'home')

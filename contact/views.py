@@ -14,6 +14,7 @@ def contact(request):
             form.save()
             user_data = form.cleaned_data
             messages.success(request, f'Thanks {user_data["name"]}, your message has been submitted and will be responded to as soon as possible')
+            # Message will display the name the user input on contact form
             return redirect(reverse('index'))
         else:
             messages.error(request, 'Failed to send message. Please ensure the form is valid.')

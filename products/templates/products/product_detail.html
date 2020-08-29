@@ -25,6 +25,7 @@
                     {% endif %}
                 </div>
                 <p class="text-center"><small>Click the link below to view location on Google Maps</small></p>
+                <!-- Each title links to google maps location of product -->
                 <p class="mb-3 text-center"><a href="{{ product.location_link }}" target="_blank">{{ product.location }}</a></p>
             </div>
             <div class="col-12 col-lg-6 text-center">
@@ -41,6 +42,7 @@
                     <div>
                         <h4 class="my-2">Frame Colour</h4>
                         <p><small>Help decide what colour frame would look good with your picture</small></p>
+                        <!-- On click, each button runs the colour change function -->
                         <button onclick="white()" class="frame-colour-button white-button"></button>
                         <button onclick="black()" class="frame-colour-button black-button"></button>
                         <button onclick="brown()" class="frame-colour-button brown-button"></button>

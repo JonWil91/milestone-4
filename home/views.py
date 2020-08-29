@@ -8,6 +8,7 @@ def index(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all().order_by('-rating')[:3]
+    # Filters all products in reverse order of rating and displays the first three
 
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')

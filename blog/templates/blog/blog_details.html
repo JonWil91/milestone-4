@@ -27,11 +27,14 @@
             <hr>
             <form action="{% url 'like_post' blog.pk %}" method="POST">
                 {% csrf_token %}
+                <!-- If logged in user has already liked the comment -->
                 {% if liked %}
                     <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-danger btn-sm">Unlike</button>
                 {% else %}
+                <!-- User has not yet liked the comment -->
                     <button type="submit" name="blog_id" value="{{ blog.id }}" class="btn btn-primary btn-sm">Like</button>
                 {% endif %}
+                <!-- Like for 1 like, likes for 0 or more than 1 like -->
                 {{ total_likes }} Like{{ total_likes|pluralize }}
             </form>
             <br/>
@@ -48,6 +51,7 @@
                     </strong>
                     <br/>
                     {{ comment.body }}
+                    <!-- If the comment was made by the logged in user -->
                     {% if request.user == comment.user %}
                         <a href="{% url 'delete_comment' comment.id %}"
                             class="text-danger">Delete Comment</a>
