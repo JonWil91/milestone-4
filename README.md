@@ -3,6 +3,8 @@
 
 Full Stack Milestone Project 4 - Code Institute
 
+The deployed site can be found at: https://jw-photography.herokuapp.com
+
 
 # **JW Photography**
 
